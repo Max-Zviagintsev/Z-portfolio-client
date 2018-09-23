@@ -31,32 +31,42 @@ const Content = Keyframes.Trail({
 });
 
 const items = [
-    <h2>Link 1</h2>,
-    <h2>Link 2</h2>,
-    <h2>Link 3</h2>,
-    <h2>Link 1</h2>,
-    <h2>Link 4</h2>
+    <p>Home</p>,
+    <p>Portfolio</p>,
+    <p>Gallery</p>,
+    <p>About me</p>,
+    <p>Contacts</p>
 ];
 
 // CSS starts
 
 const StyledIcon = styled(Icon)`
+
                     position: absolute;
                     margin: 40px;
-                    color: black;
+                    color: ${(props) => props.theme.colorPrimary};
+                    box-shadow: 0 0 20px rgba(20, 20, 20, 0.9);
+                    background-color: rgba(20, 20, 20, 0.6);
                     z-index: 100;
                     font-size: 26px;
                     cursor: pointer;
 `;
 
-const Middle = styled.div`
-                      display: flex;
-                      justify-content: center;
+const First = styled.div`
+              padding: 100px 20px 0 40px;
+              color: ${(props) => props.theme.colorPrimary};
+              text-shadow: ${(props) => props.theme.textShadow};
+`;
+
+const Middle = styled.div`      
+              padding: 15px 20px 0 40px;
+              color: ${(props) => props.theme.colorPrimary};
+              text-shadow: ${(props) => props.theme.textShadow};
 `;
 
 // CSS ends
 
-class NavBar extends Component {
+class Menu extends Component {
     constructor() {
         super();
         this.state = {open: false};
@@ -93,20 +103,16 @@ class NavBar extends Component {
                                         style={{
                                             transform: x.interpolate(x => `translate3d(${x}%,0,0)`),
                                             ...props,
-                                            backgroundColor: 'white',
+                                            backgroundColor: 'rgba(0, 0, 0, 0.6)',
                                             position: 'relative',
                                             overflow: 'hidden',
                                             height: '100%',
-                                            width: '400px',
-                                            padding: '60px 40px 40px 40px',
-                                            fontSize: '15px'
+                                            width: '165px',
+                                            fontSize: '18px',
+                                            borderRadius: '5px',
+                                            boxShadow: '0 0 20px rgba(20, 20, 20, 0.9)'
                                         }}>
-                                        {i === 0 ?
-                                            <Middle>{item}</Middle>
-                                            :
-                                            <div>{item}</div>
-                                        }
-
+                                        {i === 0 ? <First>{item}</First> : <Middle>{item}</Middle>}
                                     </animated.div>
                                 ))}
                             </Content>
@@ -118,4 +124,4 @@ class NavBar extends Component {
     }
 }
 
-export default NavBar;
+export default Menu;

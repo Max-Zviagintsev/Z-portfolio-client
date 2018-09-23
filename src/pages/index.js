@@ -1,19 +1,31 @@
 import React, {Component} from 'react';
 import {Layout} from 'antd';
-import NavBar from "../components/NavBar";
+import NavBar from "../components/NavBar/NavBar";
+import styled, {ThemeProvider} from 'styled-components';
+import GlobalStyle from '../shared/css/globalStyles';
+import {theme} from "../shared/css/theme";
+
 
 const {Header, Footer, Content} = Layout;
+
+// CSS starts
+const StyledHeader = styled(Header)`
+      height: 100vh;
+`;
+
+// CSS ends
 
 class Home extends Component {
     render() {
         return (
-            <Layout>
-                <Header>
-                    <NavBar/>
-                </Header>
-                <Content>Content</Content>
-                <Footer>Footer</Footer>
-            </Layout>
+            <ThemeProvider theme={theme}>
+                <Layout>
+                    <StyledHeader> <NavBar/> </StyledHeader>
+                    <Content>Content</Content>
+                    <Footer>Footer</Footer>
+                    <GlobalStyle/>
+                </Layout>
+            </ThemeProvider>
         );
     }
 }
