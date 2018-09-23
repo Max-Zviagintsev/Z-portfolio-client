@@ -2,17 +2,16 @@ import React, {Component} from 'react';
 import {Layout} from 'antd';
 import NavBar from "../components/NavBar";
 
-const {Header, Footer, Sider, Content} = Layout;
+const {Header, Footer, Content} = Layout;
 
 class Home extends Component {
     render() {
         return (
             <Layout>
-                <Header>Header</Header>
-                <Layout>
-                    <Sider> <NavBar/> </Sider>
-                    <Content>Content</Content>
-                </Layout>
+                <Header>
+                    <NavBar/>
+                </Header>
+                <Content>Content</Content>
                 <Footer>Footer</Footer>
             </Layout>
         );

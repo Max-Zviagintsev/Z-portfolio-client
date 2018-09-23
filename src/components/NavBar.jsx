@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
+import styled from 'styled-components';
 import {Keyframes, animated, config} from 'react-spring';
 import delay from 'delay';
-import { Icon} from 'antd';
+import {Icon} from 'antd';
+
 
 const fast = {...config.stiff, restSpeedThreshold: 1, restDisplacementThreshold: 0.01}
 
@@ -36,6 +38,24 @@ const items = [
     <h2>Link 4</h2>
 ];
 
+// CSS starts
+
+const StyledIcon = styled(Icon)`
+                    position: absolute;
+                    margin: 40px;
+                    color: black;
+                    z-index: 100;
+                    font-size: 26px;
+                    cursor: pointer;
+`;
+
+const Middle = styled.div`
+                      display: flex;
+                      justify-content: center;
+`;
+
+// CSS ends
+
 class NavBar extends Component {
     constructor() {
         super();
@@ -58,22 +78,35 @@ class NavBar extends Component {
 
         const state = !open ? 'peek' : open ? 'open' : 'close';
         const icon = open ? 'fold' : 'unfold';
+
         return (
             <div>
-                <Icon type={`menu-${icon}`} className="toggle" onClick={toggle}/>
+                <StyledIcon type={`menu-${icon}`} onClick={toggle}/>
                 <Sidebar native state={state}>
                     {({x}) => (
-                        <animated.div className="sidebar"
-                                      style={{transform: x.interpolate(x => `translate3d(${x}%,0,0)`)}}>
+                        <animated.div
+                            style={{transform: x.interpolate(x => `translate3d(${x}%,0,0)`)}}>
                             <Content native keys={items.map((_, i) => i)} config={{tension: 200, friction: 20}}
                                      state={state}>
                                 {items.map((item, i) => ({x, ...props}) => (
                                     <animated.div
                                         style={{
                                             transform: x.interpolate(x => `translate3d(${x}%,0,0)`),
-                                            ...props
+                                            ...props,
+                                            backgroundColor: 'white',
+                                            position: 'relative',
+                                            overflow: 'hidden',
+                                            height: '100%',
+                                            width: '400px',
+                                            padding: '60px 40px 40px 40px',
+                                            fontSize: '15px'
                                         }}>
-                                        <div className={i === 0 ? 'middle' : ''}>{item}</div>
+                                        {i === 0 ?
+                                            <Middle>{item}</Middle>
+                                            :
+                                            <div>{item}</div>
+                                        }
+
                                     </animated.div>
                                 ))}
                             </Content>
