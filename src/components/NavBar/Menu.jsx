@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import {Keyframes, animated, config} from 'react-spring';
 import delay from 'delay';
 import {Icon} from 'antd';
+import { Link } from 'gatsby';
 
 
 const fast = {...config.stiff, restSpeedThreshold: 1, restDisplacementThreshold: 0.01}
@@ -31,17 +32,62 @@ const Content = Keyframes.Trail({
 });
 
 const items = [
-    <p>Home</p>,
-    <p>Portfolio</p>,
-    <p>Gallery</p>,
-    <p>About me</p>,
-    <p>Contacts</p>
+
+    <Link
+        to="/"
+        style={{
+            color: 'rgba(250, 65, 0, 1)'
+        }}
+        activeStyle={{
+            color: 'rgba(255, 110, 50, 1)',
+            textShadow: '0 0 7px rgba(255, 150, 50, 1)'
+        }}
+    >Home</Link>,
+    <Link
+        to="/gallery/"
+        style={{
+            color: 'rgba(250, 65, 0, 1)'
+        }}
+        activeStyle={{
+            color: 'rgba(255, 110, 50, 1)',
+            textShadow: '0 0 7px rgba(255, 150, 50, 1)'
+        }}
+    >Gallery</Link>,
+    <Link
+        to="/portfolio/"
+        style={{
+            color: 'rgba(250, 65, 0, 1)'
+        }}
+        activeStyle={{
+            color: 'rgba(255, 110, 50, 1)',
+            textShadow: '0 0 7px rgba(255, 150, 50, 1)'
+        }}
+    >Portfolio</Link>,
+    <Link
+        to="/about-me/"
+        style={{
+            color: 'rgba(250, 65, 0, 1)'
+        }}
+        activeStyle={{
+            color: 'rgba(255, 110, 50, 1)',
+            textShadow: '0 0 7px rgba(255, 150, 50, 1)'
+        }}
+    >About me</Link>,
+    <Link
+        to="/contacts/"
+        style={{
+            color: 'rgba(250, 65, 0, 1)'
+        }}
+        activeStyle={{
+            color: 'rgba(255, 110, 50, 1)',
+            textShadow: '0 0 7px rgba(255, 150, 50, 1)'
+        }}
+    >Contacts</Link>
 ];
 
 // CSS starts
 
 const StyledIcon = styled(Icon)`
-
                     position: absolute;
                     margin: 40px;
                     color: ${(props) => props.theme.colorPrimary};
@@ -53,14 +99,12 @@ const StyledIcon = styled(Icon)`
 `;
 
 const First = styled.div`
-              padding: 100px 20px 0 40px;
-              color: ${(props) => props.theme.colorPrimary};
+              padding: 100px 20px 25px 40px;
               text-shadow: ${(props) => props.theme.textShadow};
 `;
 
 const Middle = styled.div`      
-              padding: 15px 20px 0 40px;
-              color: ${(props) => props.theme.colorPrimary};
+              padding: 0 20px 25px 40px;
               text-shadow: ${(props) => props.theme.textShadow};
 `;
 
@@ -109,7 +153,7 @@ class Menu extends Component {
                                             height: '100%',
                                             width: '165px',
                                             fontSize: '18px',
-                                            borderRadius: '5px',
+                                            borderRadius: '4px',
                                             boxShadow: '0 0 20px rgba(20, 20, 20, 0.9)'
                                         }}>
                                         {i === 0 ? <First>{item}</First> : <Middle>{item}</Middle>}
