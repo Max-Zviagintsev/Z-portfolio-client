@@ -5,16 +5,9 @@ import delay from 'delay';
 import {Icon} from 'antd';
 import { Link } from 'gatsby';
 
-
-const fast = {...config.stiff, restSpeedThreshold: 1, restDisplacementThreshold: 0.01}
-
 // Creates a spring with predefined animation slots
 const Sidebar = Keyframes.Spring({
-    // Slots can take arrays/chains,
-    peek: [
-        {delay: 500, from: {x: -100}, to: {x: 0}, config: fast},
-        {delay: 800, to: {x: -100}, config: config.slow}
-    ],
+
     // single items,
     open: {to: {x: 0}, config: config.default},
     // or async functions with side-effects
@@ -26,7 +19,6 @@ const Sidebar = Keyframes.Spring({
 
 // Creates a keyframed trail
 const Content = Keyframes.Trail({
-    peek: [{delay: 600, from: {x: -100, opacity: 0}, to: {x: 0, opacity: 1}}, {to: {x: -100, opacity: 0}}],
     open: {delay: 100, to: {x: 0, opacity: 1}},
     close: {to: {x: -100, opacity: 0}}
 });
@@ -130,7 +122,7 @@ class Menu extends Component {
                 })
         };
 
-        const state = !open ? 'peek' : open ? 'open' : 'close';
+        const state = !open ? 'close' : 'open';
         const icon = open ? 'fold' : 'unfold';
 
         return (
