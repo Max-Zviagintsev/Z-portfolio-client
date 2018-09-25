@@ -22,6 +22,8 @@
     "prop-types": "^15.6.2",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
+    "react-images": "^0.5.19",
+    "react-photo-gallery": "^6.2.1",
     "react-spring": "^5.8.0",
     "styled-components": "^4.0.0-beta.8"
   }
