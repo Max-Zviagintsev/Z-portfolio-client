@@ -12,6 +12,13 @@ module.exports = {
                     'layout-header-padding': '0'
                 }
             }
+        },
+        {
+            resolve: `gatsby-source-drupal`,
+            options: {
+                baseUrl: `http://zportfolio.lndo.site/`,
+                apiBase: `jsonapi`, // optional, defaults to `jsonapi`
+            }
         }
     ]
 };
