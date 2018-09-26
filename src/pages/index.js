@@ -1,9 +1,8 @@
 import React from 'react';
 import {Layout} from 'antd';
 import NavBar from "../components/NavBar/NavBar";
-import styled, {ThemeProvider} from 'styled-components';
+import styled from 'styled-components';
 import GlobalStyle from '../shared/css/globalStyles';
-import {theme} from "../shared/css/theme";
 import HomeHero from "../components/HomeHero";
 import background from '../../assets/home_hero.jpg';
 
@@ -19,7 +18,6 @@ const StyledHeader = styled(Header)`
 
 const Home = () => {
     return (
-        <ThemeProvider theme={theme}>
             <Layout>
                 <StyledHeader>
                     <NavBar/>
@@ -29,7 +27,6 @@ const Home = () => {
                 <Footer>Footer</Footer>
                 <GlobalStyle/>
             </Layout>
-        </ThemeProvider>
     );
 };
 

@@ -1,9 +1,8 @@
 import React from 'react';
 import {Layout} from "antd";
 import NavBar from "../components/NavBar/NavBar";
-import styled, {ThemeProvider} from 'styled-components';
+import styled from 'styled-components';
 import GlobalStyle from '../shared/css/globalStyles';
-import {theme} from "../shared/css/theme";
 import GalleryComponent from "../components/GalleryComponent";
 
 const {Header, Footer, Content} = Layout;
@@ -19,7 +18,7 @@ const StyledHeader = styled(Header)`
 
 const Gallery = () => {
     return (
-        <ThemeProvider theme={theme}>
+
             <Layout>
                 <StyledHeader>
                     <NavBar/>
@@ -31,7 +30,7 @@ const Gallery = () => {
                 <Footer>Footer</Footer>
                 <GlobalStyle/>
             </Layout>
-        </ThemeProvider>
+
     );
 };
 
