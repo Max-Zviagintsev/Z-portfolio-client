@@ -13,11 +13,9 @@ const StyledHeader = styled(Header)`
       height: 100vh;
       background: url(${background}) no-repeat fixed center;
 `;
-
 // CSS ends
 
 const Home = () => {
-
     return (
             <Layout>
                 <StyledHeader>

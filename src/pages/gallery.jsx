@@ -4,7 +4,7 @@ import NavBar from "../components/NavBar/NavBar";
 import styled from 'styled-components';
 import GlobalStyle from '../shared/css/globalStyles';
 import GalleryComponent from "../components/GalleryComponent";
-import{graphql} from 'gatsby';
+import {graphql} from 'gatsby';
 
 const {Header, Footer, Content} = Layout;
 
@@ -35,17 +35,17 @@ const StyledHeader = styled(Header)`
 
 const Gallery = ({data}) => {
     return (
-            <Layout>
-                <StyledHeader>
-                    <NavBar/>
-                </StyledHeader>
-                <Content>
-                    <h1>Examples of my work</h1>
-                    <GalleryComponent data={data}/>
-                </Content>
-                <Footer>Footer</Footer>
-                <GlobalStyle/>
-            </Layout>
+        <Layout>
+            <StyledHeader>
+                <NavBar/>
+            </StyledHeader>
+            <Content>
+                <h1>Examples of my work</h1>
+                <GalleryComponent data={data}/>
+            </Content>
+            <Footer>Footer</Footer>
+            <GlobalStyle/>
+        </Layout>
     );
 };
 

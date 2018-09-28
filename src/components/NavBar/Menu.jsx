@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import {Keyframes, animated, config} from 'react-spring';
 import delay from 'delay';
 import {Icon} from 'antd';
-import { Link } from 'gatsby';
+import {Link} from 'gatsby';
 
 // Creates a spring with predefined animation slots
 const Sidebar = Keyframes.Spring({
@@ -139,7 +139,7 @@ class Menu extends Component {
                                         style={{
                                             transform: x.interpolate(x => `translate3d(${x}%,0,0)`),
                                             ...props,
-                                            backgroundColor: 'rgba(0, 0, 0, 0.6)',
+                                            backgroundColor: 'rgba(0, 0, 0, 0.7)',
                                             position: 'relative',
                                             overflow: 'hidden',
                                             height: '100%',
