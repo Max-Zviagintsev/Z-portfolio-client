@@ -17,6 +17,7 @@ const StyledHeader = styled(Header)`
 // CSS ends
 
 const Home = () => {
+
     return (
             <Layout>
                 <StyledHeader>

@@ -4,8 +4,25 @@ import NavBar from "../components/NavBar/NavBar";
 import styled from 'styled-components';
 import GlobalStyle from '../shared/css/globalStyles';
 import GalleryComponent from "../components/GalleryComponent";
+import{graphql} from 'gatsby';
 
 const {Header, Footer, Content} = Layout;
+
+export const query = graphql`
+ query{
+                  allNodeGallery {
+                    edges{
+                      node{
+                        relationships{
+                          field_gallery_image{
+                            url
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+            `;
 
 
 // CSS starts
@@ -16,7 +33,7 @@ const StyledHeader = styled(Header)`
 
 // CSS ends
 
-const Gallery = () => {
+const Gallery = ({data}) => {
     return (
 
             <Layout>
@@ -25,7 +42,7 @@ const Gallery = () => {
                 </StyledHeader>
                 <Content>
                     <h1>Examples of my work</h1>
-                    <GalleryComponent/>
+                    <GalleryComponent data={data}/>
                 </Content>
                 <Footer>Footer</Footer>
                 <GlobalStyle/>
