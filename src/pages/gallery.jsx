@@ -35,7 +35,6 @@ const StyledHeader = styled(Header)`
 
 const Gallery = ({data}) => {
     return (
-
             <Layout>
                 <StyledHeader>
                     <NavBar/>
@@ -47,7 +46,6 @@ const Gallery = ({data}) => {
                 <Footer>Footer</Footer>
                 <GlobalStyle/>
             </Layout>
-
     );
 };
 
