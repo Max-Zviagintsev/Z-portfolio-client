@@ -145,7 +145,7 @@ class Menu extends Component {
                                             height: '100%',
                                             width: '165px',
                                             fontSize: '18px',
-                                            borderRadius: '4px',
+                                            borderRadius: '2px',
                                             boxShadow: '0 0 20px rgba(20, 20, 20, 0.9)'
                                         }}>
                                         {i === 0 ? <First>{item}</First> : <Middle>{item}</Middle>}

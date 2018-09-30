@@ -11,7 +11,6 @@ import {URL} from "../shared/glabal_variables";
 const StyledWrapper = styled.div`
     text-align: center;
 `;
-
 // CSS ends
 
 class GalleryComponent extends Component {

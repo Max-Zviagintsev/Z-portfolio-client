@@ -6,7 +6,7 @@ import {Spring} from 'react-spring';
 const StyledHero = styled.div`
       font-family: "Ailerons-Typeface";
       color: white;
-      font-size: 40px;
+      font-size: ${(props) => props.theme.fontSizeHeading};
       line-height:30px;
       text-shadow: ${(props) => props.theme.textShadow};
 `;
