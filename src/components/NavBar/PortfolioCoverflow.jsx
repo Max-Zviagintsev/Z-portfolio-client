@@ -52,7 +52,7 @@ class PortfolioCoverflow extends Component {
                         active={this.state.active}
                     >
                         {this.state.fetchedData.map((item, index) =>
-                            <img src={`${URL}${item.node.relationships.field_project_cover.url}`}
+                            <img src={`${URL}${item.node.relationships.field_project_cover.uri.url}`}
                                  alt={'Portfolio item ' + index}
                                  onClick={this._handleClick.bind(this)}
                                  key={index}/>

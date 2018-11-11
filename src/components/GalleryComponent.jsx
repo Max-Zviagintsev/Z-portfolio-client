@@ -64,7 +64,7 @@ class GalleryComponent extends Component {
 
         const photos = imageLinks.map((item) => {
             return (
-                {src: `${URL}${item.url}`, width: 2, height: 1}
+                {src: `${URL}${item.uri.url}`, width: 2, height: 1}
             );
         });
 
@@ -74,6 +74,7 @@ class GalleryComponent extends Component {
     render = () => {
         const {photos} = this.state;
         const width = this.state.width;
+        console.log(this.props);
 
         return (
             !this.state.isLoading ?

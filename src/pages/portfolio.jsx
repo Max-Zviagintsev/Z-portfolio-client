@@ -21,13 +21,19 @@ export const query = graphql`
                                     field_used_tech
                                     relationships {
                                       field_project_gallery {
-                                        url
+                                        uri{
+                                          url
+                                        }
                                       }
                                       field_project_cover {
-                                        url
+                                       uri{
+                                          url
+                                        }
                                       }
                                       field_project_gallery {
-                                        url
+                                        uri{
+                                          url
+                                        }
                                       }
                                     }
                                   }

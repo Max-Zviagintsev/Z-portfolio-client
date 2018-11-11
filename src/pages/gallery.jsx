@@ -13,7 +13,9 @@ export const query = graphql`
                       node{
                         relationships{
                           field_gallery_image{
-                            url
+                            uri {
+                                  url
+                            }
                           }
                         }
                       }
