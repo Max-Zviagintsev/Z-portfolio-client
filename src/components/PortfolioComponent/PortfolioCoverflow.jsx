@@ -3,6 +3,7 @@ import Coverflow from 'react-coverflow';
 import {URL} from "../../shared/glabal_variables";
 import Loader from 'react-loader-spinner';
 import styled from "styled-components";
+import CurrentProject from "./CurrentProject";
 
 // CSS starts
 const StyledWrapper = styled.div`
@@ -16,7 +17,8 @@ class PortfolioCoverflow extends Component {
         super(props);
 
         this.state = {
-            active: 0,
+            currentProjectIndex: null,
+            currentProject: null,
             isLoading: true,
             fetchedData: [],
             src: [],
@@ -34,9 +36,14 @@ class PortfolioCoverflow extends Component {
             fetchedData: this.props.data.allNodeProject.edges,
             isLoading: false
         });
-
-        console.log(this.state.fetchedData);
     }
+
+    handleCurrentProject = (item, index) => {
+        this.setState({
+            currentProjectIndex: index,
+            currentProject: item
+        });
+    };
 
     render() {
 
@@ -49,15 +56,19 @@ class PortfolioCoverflow extends Component {
                         displayQuantityOfSide={2}
                         navigation={true}
                         enableHeading={false}
-                        active={this.state.active}
                     >
                         {this.state.fetchedData.map((item, index) =>
                             <img src={`${URL}${item.node.relationships.field_project_cover.uri.url}`}
                                  alt={'Portfolio item ' + index}
-                                 onClick={this._handleClick.bind(this)}
+                                 onClick={() => this.handleCurrentProject(item, index)}
                                  key={index}/>
                         )}
                     </Coverflow>
+                    {this.state.currentProject != null ?
+                        <CurrentProject projectData={this.state.currentProject} />
+                        :
+                        null}
+
                 </div>
                 :
                 <StyledWrapper>
@@ -70,13 +81,6 @@ class PortfolioCoverflow extends Component {
                 </StyledWrapper>
         );
     }
-
-    _handleClick() {
-        var num = Math.floor((Math.random() * 10) + 1);
-        this.setState({
-            active: num
-        });
-    }
-};
+}
 
 export default PortfolioCoverflow;

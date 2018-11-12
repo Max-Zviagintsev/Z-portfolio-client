@@ -1,5 +1,5 @@
 import React from 'react';
-import PortfolioCoverflow from "../components/NavBar/PortfolioCoverflow";
+import PortfolioCoverflow from "../components/PortfolioComponent/PortfolioCoverflow";
 import {graphql} from "gatsby";
 import {Layout} from "antd";
 import NavBar from "../components/NavBar/NavBar";
