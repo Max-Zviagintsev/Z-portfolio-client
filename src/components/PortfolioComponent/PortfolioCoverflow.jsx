@@ -4,6 +4,8 @@ import {URL} from "../../shared/glabal_variables";
 import Loader from 'react-loader-spinner';
 import styled from "styled-components";
 import CurrentProject from "./CurrentProject";
+import { Transition } from 'react-spring'
+
 
 // CSS starts
 const StyledWrapper = styled.div`
@@ -46,7 +48,6 @@ class PortfolioCoverflow extends Component {
     };
 
     render() {
-
         return (
             !this.state.isLoading ?
                 <div>
@@ -54,7 +55,6 @@ class PortfolioCoverflow extends Component {
                         width={960}
                         height={480}
                         displayQuantityOfSide={2}
-                        navigation={true}
                         enableHeading={false}
                     >
                         {this.state.fetchedData.map((item, index) =>
@@ -65,7 +65,13 @@ class PortfolioCoverflow extends Component {
                         )}
                     </Coverflow>
                     {this.state.currentProject != null ?
-                        <CurrentProject projectData={this.state.currentProject} />
+                        <Transition
+                            from={{ opacity: 0 }}
+                            enter={{ opacity: 1 }}
+                            leave={{ opacity: 0 }}
+                            config={{tension: 10, friction: 10}}>
+                            {styles => <div style={styles}> <CurrentProject projectData={this.state.currentProject}/> </div>}
+                        </Transition>
                         :
                         null}
 

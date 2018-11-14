@@ -5,15 +5,17 @@ import styled from 'styled-components';
 import Loader from 'react-loader-spinner';
 import Measure from 'react-measure';
 
-import {URL} from "../shared/glabal_variables";
+
+import {URL} from "../../shared/glabal_variables";
 
 // CSS starts
 const StyledWrapper = styled.div`
     text-align: center;
 `;
+
 // CSS ends
 
-class GalleryComponent extends Component {
+class PortfolioGalleryComponent extends Component {
     constructor() {
         super();
         this.state = {
@@ -54,9 +56,9 @@ class GalleryComponent extends Component {
         });
     };
 
-    async componentDidMount() {
+    async setPhotos() {
         await this.setStateAsync({
-            imageLinks: this.props.data.allNodeGallery.edges[0].node.relationships.field_gallery_image,
+            imageLinks: this.props.projectData.projectData.node.relationships.field_project_gallery,
             isLoading: false
         });
 
@@ -69,6 +71,17 @@ class GalleryComponent extends Component {
         });
 
         this.setState({photos: photos});
+    }
+
+    componentDidMount() {
+        this.setPhotos();
+    }
+
+    componentDidUpdate(prevProps) {
+        if (this.props !== prevProps) {
+            this.setState({isLoading: true});
+            this.setPhotos();
+        }
     }
 
     render = () => {
@@ -112,4 +125,4 @@ class GalleryComponent extends Component {
     }
 }
 
-export default GalleryComponent;
+export default PortfolioGalleryComponent;
