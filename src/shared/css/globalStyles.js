@@ -18,6 +18,14 @@ const GlobalStyle = createGlobalStyle`
         font-weight: normal;
         src: url(${fonts.AileronsTypefaceOTF}) format("opentype");
         }
+    },
+    { 
+        @font-face {
+        font-family: "Exo 2.0";
+        font-style: normal;
+        font-weight: normal;
+        src: url(${fonts.Exo2TTF}) format("truetype");
+        }
     }
 }`;
 

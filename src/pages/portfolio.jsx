@@ -5,6 +5,7 @@ import {Layout} from "antd";
 import NavBar from "../components/NavBar/NavBar";
 import GlobalStyle from "../shared/css/globalStyles";
 import styled from "styled-components";
+import {Spring} from 'react-spring';
 
 export const query = graphql`
                             query {
@@ -69,7 +70,13 @@ const Portfolio = ({data}) => {
                 <NavBar/>
             </StyledHeader>
             <Content>
-                <StyledH1>My Projects</StyledH1>
+                <Spring
+                    from={{color: 'rgba(90, 90, 90, 1)'}}
+                    to={{color:'rgba(250, 65, 0, 1)'}}
+                    config={{tension: 10, friction: 60, delay: 1000}}>
+                    {props => <StyledH1 style={props}>My Projects</StyledH1>}
+                </Spring>
+
                 <PortfolioCoverflow data={data}/>
             </Content>
             <Footer>Footer</Footer>

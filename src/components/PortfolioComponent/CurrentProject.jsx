@@ -2,21 +2,22 @@ import React from 'react';
 import {Row, Col} from 'antd';
 import styled from "styled-components";
 import PortfolioGalleryComponent from "./PortfolioGalleryComponent";
+import {Spring} from 'react-spring';
 
 // CSS starts
 const StyledWrapper = styled.div`
     background-color: white;
+    font-family: "Exo 2.0";
+    font-size: ${(props) => props.theme.fontSizeRegular};
 `;
 
 const StyledRightCol = styled.div`
       padding: 0 15px 15px 0;
-      font-size: ${(props) => props.theme.fontSizeRegular};
       display: flex;
       flex-wrap: wrap;
 `;
 const StyledLeftCol = styled.div`
       padding: 0 15px 15px 15px;
-      font-size: ${(props) => props.theme.fontSizeRegular};
 `;
 
 const StyledTech = styled.div`
@@ -45,16 +46,38 @@ const CurrentProject = (props) => {
     return (
         <StyledWrapper>
             <Row>
-                <Col span={16}><StyledH2>Description</StyledH2> </Col>
-                <Col span={8}> <StyledH2>Tech</StyledH2> </Col>
+                <Col span={16}>
+                    <Spring
+                        from={{color: 'rgba(90, 90, 90, 1)'}}
+                        to={{color: 'rgba(250, 65, 0, 1)'}}
+                        config={{tension: 10, friction: 60, delay: 1000}}>
+                        {props => <StyledH2 style={props}>Description</StyledH2>}
+                    </Spring>
+                </Col>
+                <Col span={8}>
+                    <Spring
+                        from={{color: 'rgba(90, 90, 90, 1)'}}
+                        to={{color: 'rgba(250, 65, 0, 1)'}}
+                        config={{tension: 10, friction: 60, delay: 1000}}>
+                        {props => <StyledH2 style={props}>Tech</StyledH2>}
+                    </Spring>
+                </Col>
             </Row>
             <Row>
                 <Col span={16}>
-                    <StyledLeftCol dangerouslySetInnerHTML={{__html: props.projectData.node.field_project_description.value}}/>
+                    <StyledLeftCol
+                        dangerouslySetInnerHTML={{__html: props.projectData.node.field_project_description.value}}/>
                 </Col>
                 <Col span={8}> <StyledRightCol> {usedTech} </StyledRightCol></Col>
             </Row>
-            <StyledH2>Gallery</StyledH2>
+
+            <Spring
+                from={{color: 'rgba(90, 90, 90, 1)'}}
+                to={{color: 'rgba(250, 65, 0, 1)'}}
+                config={{tension: 10, friction: 60, delay: 1000}}>
+                {props => <StyledH2 style={props}>Gallery</StyledH2>}
+            </Spring>
+
             <PortfolioGalleryComponent projectData={props}/>
         </StyledWrapper>
     );

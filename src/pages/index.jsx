@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import GlobalStyle from '../shared/css/globalStyles';
 import HomeHero from "../components/HomeHero";
 import background from '../../assets/home_hero.jpg';
+import MyTech from "../components/MyTech";
 
 const {Header, Footer, Content} = Layout;
 
@@ -22,7 +23,7 @@ const Home = () => {
                     <NavBar/>
                     <HomeHero/>
                 </StyledHeader>
-                <Content>Content</Content>
+                <Content><MyTech/></Content>
                 <Footer>Footer</Footer>
                 <GlobalStyle/>
             </Layout>

@@ -7,6 +7,7 @@ module.exports = {
             options: {
                 javascriptEnabled: true,
                 modifyVars: {
+                    'layout-body-background': '#FFFFFF',
                     'layout-header-background': 'transparent',
                     'layout-header-height': '18px',
                     'layout-header-padding': '0'

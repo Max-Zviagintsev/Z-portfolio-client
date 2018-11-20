@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import GlobalStyle from '../shared/css/globalStyles';
 import GalleryComponent from "../components/GalleryComponent";
 import {graphql} from 'gatsby';
+import {Spring} from 'react-spring';
 
 export const query = graphql`
             query{
@@ -35,7 +36,6 @@ const StyledHeader = styled(Header)`
 
 const StyledH1 = styled.h1`
       font-family: "Ailerons-Typeface";
-      color: ${(props) => props.theme.textColorOnWhite};
       font-size: ${(props) => props.theme.fontSizeHeading};
       text-shadow: ${(props) => props.theme.textShadowOnWhite};
       text-align: center;
@@ -51,7 +51,13 @@ const Gallery = ({data}) => {
                 <NavBar/>
             </StyledHeader>
             <Content>
-                <StyledH1>Examples of my work</StyledH1>
+                <Spring
+                    from={{color: 'rgba(90, 90, 90, 1)'}}
+                    to={{color:'rgba(250, 65, 0, 1)'}}
+                    config={{tension: 10, friction: 60, delay: 1000}}>
+                    {props => <StyledH1 style={props}>My work</StyledH1>}
+                </Spring>
+
                 <GalleryComponent data={data}/>
             </Content>
             <Footer>Footer</Footer>
