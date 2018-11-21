@@ -7,7 +7,7 @@ export const theme = {
     colorPrimary: colorPrimary,
     fontSizeHeading: '40px',
     fontSizeSubHeading: '32px',
-    fontSizeRegular: '18px',
+    fontSizeRegular: '16px',
     fontSizeH3: fontSizeH3,
     textColorOnWhite: textColorOnWhite,
     textShadow: '1px 1px 5px black',

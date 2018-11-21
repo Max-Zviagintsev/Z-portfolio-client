@@ -3,16 +3,17 @@ import {Layout} from 'antd';
 import NavBar from "../components/NavBar/NavBar";
 import styled from 'styled-components';
 import GlobalStyle from '../shared/css/globalStyles';
-import HomeHero from "../components/HomeHero";
+import HomeHeroComponent from "../components/HomeHeroComponent";
 import background from '../../assets/home_hero.jpg';
-import MyTech from "../components/MyTech";
+import MyTechComponent from "../components/MyTechComponent";
+import MySkillsComponent from "../components/MySkillsComponent";
 
 const {Header, Footer, Content} = Layout;
 
 // CSS starts
 const StyledHeader = styled(Header)`
       height: 100vh;
-      background: url(${background}) no-repeat fixed center;
+      background: url(${background}) rgba(8, 14, 12, 1) no-repeat fixed center;
 `;
 // CSS ends
 
@@ -21,9 +22,12 @@ const Home = () => {
             <Layout>
                 <StyledHeader>
                     <NavBar/>
-                    <HomeHero/>
+                    <HomeHeroComponent/>
                 </StyledHeader>
-                <Content><MyTech/></Content>
+                <Content>
+                    <MyTechComponent/>
+                    <MySkillsComponent/>
+                </Content>
                 <Footer>Footer</Footer>
                 <GlobalStyle/>
             </Layout>

@@ -17,7 +17,7 @@ const StyledCol = styled(Col)`
       max-width: 630px;
 `;
 
-const HomeHero = () => {
+const HomeHeroComponent = () => {
     return (
         <StyledHero>
             <Row>
@@ -48,4 +48,4 @@ const HomeHero = () => {
     );
 };
 
-export default HomeHero;
+export default HomeHeroComponent;
