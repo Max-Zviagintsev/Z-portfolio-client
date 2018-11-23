@@ -6,13 +6,13 @@ import Waypoint from 'react-waypoint';
 import {colorPrimary, textColorOnWhite} from "../shared/css/theme";
 import SkillsBackground from '../../assets/Skills_Background.png';
 
-import { IoLogoJavascript, IoLogoHtml5, IoLogoCss3, IoLogoNodejs, IoMdLeaf, IoIosSpeedometer, IoIosTrendingUp, IoLogoUsd, IoMdMic, IoIosRocket } from 'react-icons/io';
+import { IoLogoJavascript, IoLogoHtml5, IoLogoCss3, IoLogoNodejs, IoMdLeaf, IoIosSpeedometer, IoIosTrendingUp, IoLogoUsd, IoIosGitNetwork, IoIosRocket } from 'react-icons/io';
 import { FaReact, FaDrupal, FaDatabase, FaPhp } from 'react-icons/fa';
 
 
 const SkillsWrapper = styled.h1`
       background: url(${SkillsBackground}) rgba(22, 22, 24, 1) no-repeat fixed center;
-      padding: 5px 15px 30px 15px;
+      padding: 5px 15px 50px 15px;
 `;
 
 const StyledH1 = styled.h1`
@@ -25,12 +25,13 @@ const StyledH1 = styled.h1`
 `;
 const StyledTech = styled.div`
       padding: 5px 10px;
-      margin: 10px;
+      margin: 15px;
       background-color: rgba(39, 40, 35, 1);
       color: ${(props) => props.theme.colorPrimary};
       border: 1px solid ${(props) => props.theme.colorPrimary};
       border-radius: 4px;
       box-shadow: 1px 1px 4px rgba(20, 20, 20, 0.4);
+      font-family: "Exo 2.0";
       font-size: ${(props) => props.theme.fontSizeRegular};
       display: flex;
       justify-content: center;
@@ -182,7 +183,7 @@ class MySkillsComponent extends Component {
                         </Animated>
 
                         <Animated animationIn="bounceInDown" animationOut="fadeOut" isVisible={true}>
-                            <StyledTech> <IoMdMic />&nbsp;Fluent English</StyledTech>
+                            <StyledTech> <IoIosGitNetwork />&nbsp;GraphQL</StyledTech>
                         </Animated>
 
                         <Animated animationIn="bounceInDown" animationOut="fadeOut" isVisible={true}>

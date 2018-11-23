@@ -6,6 +6,8 @@ import GlobalStyle from '../shared/css/globalStyles';
 import GalleryComponent from "../components/GalleryComponent";
 import {graphql} from 'gatsby';
 import {Spring} from 'react-spring';
+import FooterComponent from "../components/FooterComponent";
+import {colorPrimary, textColorOnWhite} from '../shared/css/theme.js';
 
 export const query = graphql`
             query{
@@ -25,7 +27,7 @@ export const query = graphql`
                 }
             `;
 
-const {Header, Footer, Content} = Layout;
+const {Header, Content} = Layout;
 
 // CSS starts
 const StyledHeader = styled(Header)`
@@ -52,15 +54,15 @@ const Gallery = ({data}) => {
             </StyledHeader>
             <Content>
                 <Spring
-                    from={{color: 'rgba(90, 90, 90, 1)'}}
-                    to={{color:'rgba(250, 65, 0, 1)'}}
+                    from={{color: textColorOnWhite}}
+                    to={{color:colorPrimary}}
                     config={{tension: 10, friction: 60, delay: 1000}}>
                     {props => <StyledH1 style={props}>My work</StyledH1>}
                 </Spring>
 
                 <GalleryComponent data={data}/>
             </Content>
-            <Footer>Footer</Footer>
+            <FooterComponent />
             <GlobalStyle/>
         </Layout>
     );

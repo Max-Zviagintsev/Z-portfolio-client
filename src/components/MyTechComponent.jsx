@@ -155,17 +155,22 @@ class MyTechComponent extends Component {
                         <StyledH3>Used by:</StyledH3>
 
                         <UsedByWrapper>
-                            <a href="https://www.facebook.com/"><UsedByImage src={FacebookLogo} alt="Facebook logo"
-                                                                             width='50px' height='auto'/></a>
-                            <a href="https://www.instagram.com/?hl=en"><UsedByImage src={InstagramLogo}
-                                                                                    alt="Instagram logo" width='50px'
-                                                                                    height='auto'/></a>
-                            <a href="https://www.paypal.com"><UsedByImage src={PaypalLogo} alt="Paypal logo"
-                                                                          width='50px' height='auto'/></a>
-                            <a href="https://www.nytimes.com/"><UsedByImage src={NYTimesLogo} alt="New York Times logo"
-                                                                            width='50px' height='auto'/></a>
-                            <a href="https://www.netflix.com"><UsedByImage src={NetflixLogo} alt="Netflix logo"
-                                                                           width='50px' height='auto'/></a>
+                            <a href="https://www.facebook.com/">
+                                <UsedByImage src={FacebookLogo} alt="Facebook logo"
+                                             width='50px' height='auto'/></a>
+                            <a href="https://www.instagram.com/?hl=en">
+                                <UsedByImage src={InstagramLogo}
+                                             alt="Instagram logo" width='50px'
+                                             height='auto'/></a>
+                            <a href="https://www.paypal.com">
+                                <UsedByImage src={PaypalLogo} alt="Paypal logo"
+                                             width='50px' height='auto'/></a>
+                            <a href="https://www.nytimes.com/">
+                                <UsedByImage src={NYTimesLogo} alt="New York Times logo"
+                                             width='50px' height='auto'/></a>
+                            <a href="https://www.netflix.com">
+                                <UsedByImage src={NetflixLogo} alt="Netflix logo"
+                                             width='50px' height='auto'/></a>
                         </UsedByWrapper>
 
                         <Typist cursor={{show: false}} avgTypingDelay={1} stdTypingDelay={1}>
@@ -208,13 +213,13 @@ class MyTechComponent extends Component {
                     />
 
 
-                        <Spring
-                            from={{backgroundColor: textColorOnWhite}}
-                            to={{backgroundColor: `${this.state.showBorder}`}}
-                            config={{tension: 10, friction: 40, delay: 1000}}>
-                            {props =>
-                                <MiddleDiv style={props}>&nbsp;</MiddleDiv>}
-                        </Spring>
+                    <Spring
+                        from={{backgroundColor: textColorOnWhite}}
+                        to={{backgroundColor: `${this.state.showBorder}`}}
+                        config={{tension: 10, friction: 40, delay: 1000}}>
+                        {props =>
+                            <MiddleDiv style={props}>&nbsp;</MiddleDiv>}
+                    </Spring>
 
                     <StyledRightDiv>
                         <StyledH2>Drupal</StyledH2>
@@ -225,19 +230,24 @@ class MyTechComponent extends Component {
                         <StyledH3>Used by:</StyledH3>
 
                         <UsedByWrapper>
-                            <a href="https://products.internetservices.verizon.com/"><UsedByImage src={VerizonLogo}
-                                                                                                  alt="Verizon logo"
-                                                                                                  width='70px'
-                                                                                                  height='auto'/></a>
-                            <a href="https://www.tesla.com/"><UsedByImage src={TeslaLogo} alt="Tesla logo" width='43px'
-                                                                          height='auto'/></a>
-                            <a href="https://www.nasa.gov/"><UsedByImage src={NasaLogo} alt="NASA logo" width='50px'
-                                                                         height='auto'/></a>
-                            <a href="https://business.pinterest.com/en"><UsedByImage src={PinterestLogo}
-                                                                                     alt="Pinterest logo" width='50px'
-                                                                                     height='auto'/></a>
-                            <a href="https://www.nokia.com"><UsedByImage src={NokiaLogo} alt="Nokia logo" width='70px'
-                                                                         height='auto'/></a>
+                            <a href="https://products.internetservices.verizon.com/">
+                                <UsedByImage src={VerizonLogo}
+                                             alt="Verizon logo"
+                                             width='70px'
+                                             height='auto'/></a>
+                            <a href="https://www.tesla.com/">
+                                <UsedByImage src={TeslaLogo} alt="Tesla logo" width='43px'
+                                             height='auto'/></a>
+                            <a href="https://www.nasa.gov/">
+                                <UsedByImage src={NasaLogo} alt="NASA logo" width='50px'
+                                             height='auto'/></a>
+                            <a href="https://business.pinterest.com/en">
+                                <UsedByImage src={PinterestLogo}
+                                             alt="Pinterest logo" width='50px'
+                                             height='auto'/></a>
+                            <a href="https://www.nokia.com">
+                                <UsedByImage src={NokiaLogo} alt="Nokia logo" width='70px'
+                                             height='auto'/></a>
                         </UsedByWrapper>
                         <Typist cursor={{show: false}} avgTypingDelay={1} stdTypingDelay={1}>
                             <TechRow><Loader

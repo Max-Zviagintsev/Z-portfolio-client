@@ -7,8 +7,23 @@ import HomeHeroComponent from "../components/HomeHeroComponent";
 import background from '../../assets/home_hero.jpg';
 import MyTechComponent from "../components/MyTechComponent";
 import MySkillsComponent from "../components/MySkillsComponent";
+import TestimonialsComponent from "../components/TestimonialsComponent";
+import {graphql} from "gatsby";
+import FooterComponent from "../components/FooterComponent";
 
-const {Header, Footer, Content} = Layout;
+export const query = graphql`
+                       query {allNodeTestimonials{
+                        edges{
+                            node{
+                                field_client,
+                                field_testimonial
+                                }
+                               }
+                              }
+                             }
+                        `;
+
+const {Header, Content} = Layout;
 
 // CSS starts
 const StyledHeader = styled(Header)`
@@ -17,20 +32,21 @@ const StyledHeader = styled(Header)`
 `;
 // CSS ends
 
-const Home = () => {
+const Home = ({data}) => {
     return (
-            <Layout>
-                <StyledHeader>
-                    <NavBar/>
-                    <HomeHeroComponent/>
-                </StyledHeader>
-                <Content>
-                    <MyTechComponent/>
-                    <MySkillsComponent/>
-                </Content>
-                <Footer>Footer</Footer>
-                <GlobalStyle/>
-            </Layout>
+        <Layout>
+            <StyledHeader>
+                <NavBar/>
+                <HomeHeroComponent/>
+            </StyledHeader>
+            <Content>
+                <MyTechComponent/>
+                <MySkillsComponent/>
+                <TestimonialsComponent data={data}/>
+            </Content>
+            <FooterComponent />
+            <GlobalStyle/>
+        </Layout>
     );
 };
 

@@ -26,6 +26,30 @@ const GlobalStyle = createGlobalStyle`
         font-weight: normal;
         src: url(${fonts.Exo2TTF}) format("truetype");
         }
+    },
+    { 
+        @font-face {
+        font-family: "Exo 2.0, italic";
+        font-style: normal;
+        font-weight: normal;
+        src: url(${fonts.Exo2ItalicTTF}) format("truetype");
+        }
+    },
+        { 
+        @font-face {
+        font-family: "Exo 2.0, bold";
+        font-style: normal;
+        font-weight: normal;
+        src: url(${fonts.Exo2BoldTTF}) format("truetype");
+        }
+    },
+        { 
+        @font-face {
+        font-family: "Exo 2.0, bold italic";
+        font-style: normal;
+        font-weight: normal;
+        src: url(${fonts.Exo2BoldItalicTTF}) format("truetype");
+        }
     }
 }`;
 

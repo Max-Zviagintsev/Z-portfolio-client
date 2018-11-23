@@ -6,6 +6,7 @@ import NavBar from "../components/NavBar/NavBar";
 import GlobalStyle from "../shared/css/globalStyles";
 import styled from "styled-components";
 import {Spring} from 'react-spring';
+import FooterComponent from "../components/FooterComponent";
 
 export const query = graphql`
                             query {
@@ -43,7 +44,7 @@ export const query = graphql`
                             }
                             `;
 
-const {Header, Footer, Content} = Layout;
+const {Header, Content} = Layout;
 
 // CSS starts
 const StyledHeader = styled(Header)`
@@ -79,7 +80,7 @@ const Portfolio = ({data}) => {
 
                 <PortfolioCoverflow data={data}/>
             </Content>
-            <Footer>Footer</Footer>
+            <FooterComponent />
             <GlobalStyle/>
         </Layout>
     );
