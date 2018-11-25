@@ -64,17 +64,7 @@ const items = [
             color: 'rgba(255, 110, 50, 1)',
             textShadow: '0 0 7px rgba(255, 150, 50, 1)'
         }}
-    >About me</Link>,
-    <Link
-        to="/contacts/"
-        style={{
-            color: 'rgba(250, 65, 0, 1)'
-        }}
-        activeStyle={{
-            color: 'rgba(255, 110, 50, 1)',
-            textShadow: '0 0 7px rgba(255, 150, 50, 1)'
-        }}
-    >Contacts</Link>
+    >About me</Link>
 ];
 
 // CSS starts

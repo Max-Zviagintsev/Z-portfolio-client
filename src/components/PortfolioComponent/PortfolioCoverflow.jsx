@@ -4,12 +4,25 @@ import {URL} from "../../shared/glabal_variables";
 import Loader from 'react-loader-spinner';
 import styled from "styled-components";
 import CurrentProject from "./CurrentProject";
-import { Transition } from 'react-spring'
-
+import {Transition} from 'react-spring';
+import {IconContext} from "react-icons";
+import {IoIosArrowRoundUp} from 'react-icons/io';
+import {colorPrimary} from '../../shared/css/theme.js';
 
 // CSS starts
 const StyledWrapper = styled.div`
     text-align: center;
+`;
+const HelperWrapper = styled.div`
+    text-align: center;
+    min-height: 40vh;
+`;
+const HelperText = styled.div`
+    text-align: center;
+    font-family: "Exo 2.0";
+    color: ${(props) => props.theme.colorPrimary};
+    font-size: 20px;
+    text-shadow: ${(props) => props.theme.textShadowOnWhite};
 `;
 
 // CSS ends
@@ -66,21 +79,28 @@ class PortfolioCoverflow extends Component {
                     </Coverflow>
                     {this.state.currentProject != null ?
                         <Transition
-                            from={{ opacity: 0 }}
-                            enter={{ opacity: 1 }}
-                            leave={{ opacity: 0 }}
+                            from={{opacity: 0}}
+                            enter={{opacity: 1}}
+                            leave={{opacity: 0}}
                             config={{tension: 10, friction: 10}}>
-                            {styles => <div style={styles}> <CurrentProject projectData={this.state.currentProject}/> </div>}
+                            {styles => <div style={styles}><CurrentProject projectData={this.state.currentProject}/>
+                            </div>}
                         </Transition>
                         :
-                        null}
+                        <HelperWrapper>
+                            <IconContext.Provider value={{color: colorPrimary, size: '72px'}}>
+                                <IoIosArrowRoundUp/>
+                            </IconContext.Provider>
+                            <HelperText>Click on the picture for project details</HelperText>
+                        </HelperWrapper>
+                    }
 
                 </div>
                 :
                 <StyledWrapper>
                     <Loader
                         type="Triangle"
-                        color="rgba(250, 65, 0, 1)"
+                        color={colorPrimary}
                         height="100"
                         width="100"
                     />
