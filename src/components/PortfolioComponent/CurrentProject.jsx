@@ -68,7 +68,13 @@ const CurrentProject = (props) => {
                     <StyledLeftCol
                         dangerouslySetInnerHTML={{__html: props.projectData.node.field_project_description.value}}/>
                 </Col>
-                <Col span={8}> <StyledRightCol> {usedTech} </StyledRightCol></Col>
+
+                <Col span={8}> <StyledRightCol> {usedTech} </StyledRightCol>
+                    {props.projectData.node.field_project_url !== null ?
+                        <a href={props.projectData.node.field_project_url.uri} target="_blank" rel="noopener noreferrer">&nbsp;Project link</a>
+                        :
+                        null}
+                </Col>
             </Row>
 
             <Spring

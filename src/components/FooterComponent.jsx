@@ -9,14 +9,22 @@ import {IconContext} from "react-icons";
 const {Footer} = Layout;
 
 const StyledFooter = styled(Footer)`
-      height: 80px;
       background-color: rgba(20, 20, 20, 0.8);
       box-shadow: 0 0 6px rgba(20, 20, 20, 0.9);
       margin-top: 20px;
       display: flex;
+      flex-direction: column;
+`;
+
+const Contacts = styled.div`
+      display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
+      
+  @media (min-width: 825px) {
+    justify-content: space-between;
+  }
 `;
 
 const FooterItem = styled.div`
@@ -28,12 +36,22 @@ const FooterItem = styled.div`
       font-size: ${(props) => props.theme.fontSizeRegular};
       color: ${colorPrimary};
       text-shadow: ${(props) => props.theme.textShadow};
+      margin: 10px;
+`;
+const CopyRight = styled.div`
+      font-family: "Exo 2.0, italic";
+      font-size: 13px;
+      color: ${colorPrimary};
+      text-shadow: ${(props) => props.theme.textShadow};
+      text-align: center;
+      margin-top: 10px;
 `;
 
 class FooterComponent extends Component {
     render() {
         return (
             <StyledFooter>
+                <Contacts>
                 <FooterItem>
                     <IconContext.Provider value={{size: "24px"}}>
                         <IoIosMail/>
@@ -57,6 +75,9 @@ class FooterComponent extends Component {
                         &nbsp;
                         Telegram ID: max_zviagintsev
                 </FooterItem>
+                </Contacts>
+
+                <CopyRight>Visual art by Yi Liu. © 2019 Maxim Zviagintsev All Rights Reserved.</CopyRight>
 
             </StyledFooter>
         );
