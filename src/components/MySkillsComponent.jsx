@@ -10,9 +10,10 @@ import { IoLogoJavascript, IoLogoHtml5, IoLogoCss3, IoLogoNodejs, IoMdLeaf, IoIo
 import { FaReact, FaDrupal, FaDatabase, FaPhp } from 'react-icons/fa';
 
 
-const SkillsWrapper = styled.h1`
+const SkillsWrapper = styled.div`
       background: url(${SkillsBackground}) rgba(22, 22, 24, 1) no-repeat fixed center;
       padding: 5px 15px 50px 15px;
+      min-height: 503px;
 `;
 
 const StyledH1 = styled.h1`
@@ -25,7 +26,10 @@ const StyledH1 = styled.h1`
 `;
 const StyledTech = styled.div`
       padding: 5px 10px;
-      margin: 15px;
+      margin: 15px 5px;
+        @media(min-width: 540px) {
+        margin: 15px;
+        }
       background-color: rgba(39, 40, 35, 1);
       color: ${(props) => props.theme.colorPrimary};
       border: 1px solid ${(props) => props.theme.colorPrimary};

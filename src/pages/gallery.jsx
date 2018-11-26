@@ -41,7 +41,7 @@ const StyledH1 = styled.h1`
       font-size: ${(props) => props.theme.fontSizeHeading};
       text-shadow: ${(props) => props.theme.textShadowOnWhite};
       text-align: center;
-      margin: 30px 15px;
+      margin: 46px 15px;
 `;
 
 // CSS ends
@@ -56,7 +56,7 @@ const Gallery = ({data}) => {
                 <Spring
                     from={{color: textColorOnWhite}}
                     to={{color:colorPrimary}}
-                    config={{tension: 10, friction: 60, delay: 1000}}>
+                    config={{tension: 10, friction: 60, delay: 500}}>
                     {props => <StyledH1 style={props}>My work</StyledH1>}
                 </Spring>
 

@@ -67,7 +67,7 @@ class PortfolioCoverflow extends Component {
                     <Coverflow
                         width={960}
                         height={480}
-                        displayQuantityOfSide={2}
+                        displayQuantityOfSide={1}
                         enableHeading={false}
                     >
                         {this.state.fetchedData.map((item, index) =>
@@ -91,7 +91,7 @@ class PortfolioCoverflow extends Component {
                             <IconContext.Provider value={{color: colorPrimary, size: '72px'}}>
                                 <IoIosArrowRoundUp/>
                             </IconContext.Provider>
-                            <HelperText>Click on the picture for project details</HelperText>
+                            <HelperText>Click for project details</HelperText>
                         </HelperWrapper>
                     }
 

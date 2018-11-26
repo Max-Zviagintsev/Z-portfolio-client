@@ -49,8 +49,11 @@ const StyledH3 = styled.h1`
       margin: 30px 15px;
 `;
 const StyledInner = styled.div`
-      display: flex;
+      display: block;
       padding: 0 15px 30px 15px;
+        @media(min-width: 1000px) {
+        display: flex;
+        }
 `;
 const StyledLeftDiv = styled.div`
       display: flex;
@@ -79,6 +82,9 @@ const ImageContainerLeft = styled.div`
 const MiddleDiv = styled.div`
       flex: 1;
       max-width: 1px;
+      @media(max-width: 1000px) {
+        display: none;
+      }
 `;
 const TechRow = styled.div`
       display: flex;
@@ -141,9 +147,10 @@ class MyTechComponent extends Component {
                 <Spring
                     from={{color: textColorOnWhite}}
                     to={{color: `${this.state.showMyTech}`}}
-                    config={{tension: 10, friction: 40, delay: 1000}}>
+                    config={{tension: 10, friction: 40, delay: 500}}>
                     {props => <StyledH1 style={props}>My Tech</StyledH1>}
                 </Spring>
+
                 <StyledInner>
 
                     <StyledLeftDiv>
@@ -216,7 +223,7 @@ class MyTechComponent extends Component {
                     <Spring
                         from={{backgroundColor: textColorOnWhite}}
                         to={{backgroundColor: `${this.state.showBorder}`}}
-                        config={{tension: 10, friction: 40, delay: 1000}}>
+                        config={{tension: 10, friction: 40, delay: 500}}>
                         {props =>
                             <MiddleDiv style={props}>&nbsp;</MiddleDiv>}
                     </Spring>
@@ -283,7 +290,9 @@ class MyTechComponent extends Component {
                         </Typist>
 
                     </StyledRightDiv>
+
                 </StyledInner>
+
             </MyTechWrapper>
         );
     };

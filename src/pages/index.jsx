@@ -27,8 +27,12 @@ const {Header, Content} = Layout;
 
 // CSS starts
 const StyledHeader = styled(Header)`
-      height: 100vh;
-      background: url(${background}) rgba(8, 14, 12, 1) no-repeat fixed center;
+      height: 800px;
+      background: url(${background}) rgba(8, 14, 12, 1) no-repeat fixed;
+      
+      @media(min-width: 1600px) {
+      height: 1080px;
+      }
 `;
 // CSS ends
 
@@ -44,7 +48,7 @@ const Home = ({data}) => {
                 <MySkillsComponent/>
                 <TestimonialsComponent data={data}/>
             </Content>
-            <FooterComponent />
+            <FooterComponent/>
             <GlobalStyle/>
         </Layout>
     );

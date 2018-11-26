@@ -4,6 +4,7 @@ import Lightbox from 'react-images';
 import styled from 'styled-components';
 import Loader from 'react-loader-spinner';
 import Measure from 'react-measure';
+import {colorPrimary} from '../shared/css/theme.js';
 
 import {URL} from "../shared/glabal_variables";
 
@@ -103,7 +104,7 @@ class GalleryComponent extends Component {
                 <StyledWrapper>
                     <Loader
                         type="Triangle"
-                        color="rgba(250, 65, 0, 1)"
+                        color={colorPrimary}
                         height="100"
                         width="100"
                     />

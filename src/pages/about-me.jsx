@@ -8,7 +8,7 @@ import GlobalStyle from "../shared/css/globalStyles";
 import AboutMeComponent from "../components/AboutMeComponent";
 
 const StyledTop = styled.div`
-      background: url(${background}) rgba(45, 37, 26, 1) no-repeat fixed center;
+      background: url(${background}) rgba(45, 37, 26, 1) no-repeat fixed;
 `;
 
 const AboutMe = () => {

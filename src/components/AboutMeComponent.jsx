@@ -12,7 +12,10 @@ const Wrapper = styled.div`
 `;
 const Background = styled.div`
       max-width: 800px;
-      padding: 15px;
+        padding: 15px;
+        @media(min-width: 800px){
+        padding: 25px;
+        }
       border-radius: 5px;
 `;
 const Inner = styled.div`
@@ -34,7 +37,10 @@ const TopInner = styled.div`
       width: 100%;
       font-family: "Ailerons-Typeface";
       color: ${(props) => props.theme.colorPrimary};
-      font-size: 24px;
+      font-size: 20px;
+        @media(min-width: 678px) {
+        font-size: 24px;
+        }
       text-shadow: ${(props) => props.theme.textShadowOnWhite};
 `;
 const Portrait = styled.img`
@@ -61,7 +67,7 @@ const AboutMeComponent = () => {
                                           width='128px' height='144px'/>
                                 <TopInner>
                                     <p>My name is Max</p>
-                                    <p>I create beautiful web-apps</p>
+                                    <p>I create beautiful websites and apps</p>
                                 </TopInner>
                             </TopWrapper>
                             <Text> If you need a website or app, you probably want a Content Management System to

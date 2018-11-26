@@ -14,6 +14,7 @@ const StyledFooter = styled(Footer)`
       margin-top: 20px;
       display: flex;
       flex-direction: column;
+      padding: 10px !important;
 `;
 
 const Contacts = styled.div`
@@ -33,7 +34,7 @@ const FooterItem = styled.div`
       justify-content: center;
       align-items: center;
       font-family: "Exo 2.0";
-      font-size: ${(props) => props.theme.fontSizeRegular};
+      font-size: 14px;
       color: ${colorPrimary};
       text-shadow: ${(props) => props.theme.textShadow};
       margin: 10px;

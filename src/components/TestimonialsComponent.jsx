@@ -21,13 +21,16 @@ const StyledH1 = styled.h1`
       margin: 30px 15px;
 `;
 const TestimonialsWrapper = styled.div`
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
+      display: block;
+        @media(min-width: 700px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
 `;
 const StyledInterface = styled.img`
       box-shadow: 1px 1px 15px rgba(90, 90, 90, 1);
+      max-width: 655px;
 `;
 const TestimonialsInner = styled.div`
       font-family: "Exo 2.0";
@@ -43,6 +46,7 @@ const TestimonialsItem = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
+      margin: 15px;
 `;
 const Testimonial = styled.div`
       font-family: "Exo 2.0, italic";
@@ -93,19 +97,21 @@ class TestimonialsComponent extends Component {
 
         return (
             !this.state.isLoading ?
-                <div>
+                <React.Fragment>
                     <Waypoint onEnter={this.showHeading} onLeave={this.hideHeading}/>
                     <Spring
                         from={{color: textColorOnWhite}}
                         to={{color: `${this.state.showHeading}`}}
-                        config={{tension: 10, friction: 40, delay: 1000}}>
+                        config={{tension: 10, friction: 40, delay: 500}}>
                         {props => <StyledH1 style={props}>Testimonials</StyledH1>}
                     </Spring>
 
                     <TestimonialsWrapper>
+
                         <TestimonialsItem>
-                            <StyledInterface src={Interface} alt="Interface" width="540px"/>
+                            <StyledInterface src={Interface} alt="Interface" width="100%"/>
                         </TestimonialsItem>
+
                         <TestimonialsItem>
                             <Slider direction="vertical">
                                 {this.state.fetchedData.map((item, index) => (
@@ -117,8 +123,10 @@ class TestimonialsComponent extends Component {
                                 ))}
                             </Slider>
                         </TestimonialsItem>
+
                     </TestimonialsWrapper>
-                </div> :
+                </React.Fragment>
+                :
                 <StyledWrapper>
                     <Loader
                         type="Triangle"

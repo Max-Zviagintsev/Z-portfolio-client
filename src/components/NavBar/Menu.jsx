@@ -81,17 +81,19 @@ const StyledIcon = styled(Icon)`
 `;
 
 const First = styled.div`
-              padding: 100px 20px 25px 40px;
+              padding: 90px 15px 15px 40px;
               text-shadow: ${(props) => props.theme.textShadow};
               font-family: "Exo 2.0";
               font-size: ${(props) => props.theme.fontSizeRegular};
+              z-index: 100;
 `;
 
 const Middle = styled.div`      
-              padding: 0 20px 25px 40px;
+              padding: 15px 15px 15px 40px;
               text-shadow: ${(props) => props.theme.textShadow};
               font-family: "Exo 2.0";
               font-size: ${(props) => props.theme.fontSizeRegular};
+              z-index: 100;
 `;
 
 // CSS ends
