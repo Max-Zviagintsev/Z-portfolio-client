@@ -6,4 +6,19 @@ exports.onCreateBabelConfig = ({ actions }) => {
             style: true
         }
     })
-}
+};
+
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+    if (stage === "build-html") {
+        actions.setWebpackConfig({
+            module: {
+                rules: [
+                    {
+                        test: /react-coverflow/,
+                        use: loaders.null(),
+                    },
+                ],
+            },
+        })
+    }
+};

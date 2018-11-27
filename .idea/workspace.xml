@@ -3,13 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="99071c56-c80c-49b1-ad66-5ee7adb08a79" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FooterComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FooterComponent.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GalleryComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GalleryComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-node.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-node.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PortfolioComponent/PortfolioCoverflow.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PortfolioComponent/PortfolioCoverflow.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PortfolioComponent/PortfolioGalleryComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PortfolioComponent/PortfolioGalleryComponent.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/portfolio.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/portfolio.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/glabal_variables.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/glabal_variables.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +39,7 @@
           <entry key="css" value="3" />
           <entry key="gitignore" value="1" />
           <entry key="html" value="2" />
-          <entry key="js" value="82" />
+          <entry key="js" value="83" />
           <entry key="json" value="18" />
           <entry key="jsx" value="150" />
           <entry key="lock" value="9" />
@@ -56,7 +52,7 @@
           <entry key="HTML" value="2" />
           <entry key="JSON" value="18" />
           <entry key="JSX Harmony" value="150" />
-          <entry key="JavaScript" value="82" />
+          <entry key="JavaScript" value="83" />
           <entry key="yarn.lock" value="9" />
         </counts>
       </usages-collector>
@@ -69,9 +65,9 @@
         <counts>
           <entry key="css" value="22" />
           <entry key="html" value="1" />
-          <entry key="js" value="2021" />
+          <entry key="js" value="2025" />
           <entry key="json" value="65" />
-          <entry key="jsx" value="13352" />
+          <entry key="jsx" value="13508" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -79,8 +75,8 @@
           <entry key="CSS" value="22" />
           <entry key="HTML" value="2" />
           <entry key="JSON" value="65" />
-          <entry key="JSX Harmony" value="13066" />
-          <entry key="JavaScript" value="2016" />
+          <entry key="JSX Harmony" value="13222" />
+          <entry key="JavaScript" value="2020" />
           <entry key="Less" value="290" />
         </counts>
       </usages-collector>
@@ -91,8 +87,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/portfolio.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="82" column="22" lean-forward="true" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
+            <state relative-caret-position="1932">
+              <caret line="84" column="26" selection-start-line="84" selection-start-column="26" selection-end-line="84" selection-end-column="26" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -103,7 +99,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/HomeHeroComponent.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
+            <state relative-caret-position="439">
               <caret line="65" column="14" selection-start-line="65" selection-start-column="14" selection-end-line="65" selection-end-column="14" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
@@ -115,11 +111,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/PortfolioComponent/PortfolioCoverflow.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
-              <caret line="98" column="69" lean-forward="true" selection-start-line="95" selection-start-column="24" selection-end-line="98" selection-end-column="69" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="23">
+              <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gatsby-node.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -127,8 +129,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/PortfolioComponent/PortfolioGalleryComponent.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="638">
-              <caret line="119" column="20" lean-forward="true" selection-start-line="119" selection-start-column="20" selection-end-line="120" selection-end-column="25" />
+            <state relative-caret-position="757">
+              <caret line="119" column="20" selection-start-line="119" selection-start-column="20" selection-end-line="120" selection-end-column="25" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -139,8 +141,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/GalleryComponent.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="108" column="27" lean-forward="true" selection-start-line="108" selection-start-column="27" selection-end-line="108" selection-end-column="27" />
+            <state relative-caret-position="431">
+              <caret line="108" column="27" selection-start-line="108" selection-start-column="27" selection-end-line="108" selection-end-column="27" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -148,11 +150,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/FooterComponent.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+            <state relative-caret-position="1702">
+              <caret line="74" selection-start-line="74" selection-end-line="74" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -191,7 +193,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/components/NavBar.jsx" />
-        <option value="$PROJECT_DIR$/gatsby-node.js" />
         <option value="$PROJECT_DIR$/src/shared/globalStyles.js" />
         <option value="$PROJECT_DIR$/src/components/NavBar/Logo.jsx" />
         <option value="$PROJECT_DIR$/src/pages/contacts.js" />
@@ -230,11 +231,12 @@
         <option value="$PROJECT_DIR$/src/pages/gallery.jsx" />
         <option value="$PROJECT_DIR$/gatsby-config.js" />
         <option value="$PROJECT_DIR$/src/shared/glabal_variables.js" />
-        <option value="$PROJECT_DIR$/src/pages/portfolio.jsx" />
-        <option value="$PROJECT_DIR$/src/components/PortfolioComponent/PortfolioCoverflow.jsx" />
         <option value="$PROJECT_DIR$/src/components/PortfolioComponent/PortfolioGalleryComponent.jsx" />
         <option value="$PROJECT_DIR$/src/components/GalleryComponent.jsx" />
         <option value="$PROJECT_DIR$/src/components/FooterComponent.jsx" />
+        <option value="$PROJECT_DIR$/src/pages/portfolio.jsx" />
+        <option value="$PROJECT_DIR$/src/components/PortfolioComponent/PortfolioCoverflow.jsx" />
+        <option value="$PROJECT_DIR$/gatsby-node.js" />
       </list>
     </option>
   </component>
@@ -299,6 +301,13 @@
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="components" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="z-client" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="components" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="PortfolioComponent" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="z-client" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -431,18 +440,17 @@
       <workItem from="1543051475267" duration="2299000" />
       <workItem from="1543135656639" duration="14527000" />
       <workItem from="1543228544838" duration="25319000" />
-      <workItem from="1543320716639" duration="6465000" />
+      <workItem from="1543320716639" duration="10348000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="319811000" />
+    <option name="totallyTimeSpent" value="323694000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1391258" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1391258" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -458,7 +466,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="RNConsole" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="12" visible="true" weight="0.2819383" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.12885463" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -550,13 +558,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="51" selection-start-column="51" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gatsby-node.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -722,19 +723,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/portfolio.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="82" column="22" lean-forward="true" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/HomeHeroComponent.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
+        <state relative-caret-position="439">
           <caret line="65" column="14" selection-start-line="65" selection-start-column="14" selection-end-line="65" selection-end-column="14" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
@@ -742,20 +733,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/GalleryComponent.jsx">
+    <entry file="file://$PROJECT_DIR$/src/components/FooterComponent.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="108" column="27" lean-forward="true" selection-start-line="108" selection-start-column="27" selection-end-line="108" selection-end-column="27" />
+        <state relative-caret-position="1702">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/PortfolioComponent/PortfolioCoverflow.jsx">
+    <entry file="file://$PROJECT_DIR$/src/components/GalleryComponent.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="98" column="69" lean-forward="true" selection-start-line="95" selection-start-column="24" selection-end-line="98" selection-end-column="69" />
+        <state relative-caret-position="431">
+          <caret line="108" column="27" selection-start-line="108" selection-start-column="27" selection-end-line="108" selection-end-column="27" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -764,21 +755,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/PortfolioComponent/PortfolioGalleryComponent.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="119" column="20" lean-forward="true" selection-start-line="119" selection-start-column="20" selection-end-line="120" selection-end-column="25" />
+        <state relative-caret-position="757">
+          <caret line="119" column="20" selection-start-line="119" selection-start-column="20" selection-end-line="120" selection-end-column="25" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/FooterComponent.jsx">
+    <entry file="file://$PROJECT_DIR$/src/pages/portfolio.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+        <state relative-caret-position="1932">
+          <caret line="84" column="26" selection-start-line="84" selection-start-column="26" selection-end-line="84" selection-end-column="26" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/PortfolioComponent/PortfolioCoverflow.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gatsby-node.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>

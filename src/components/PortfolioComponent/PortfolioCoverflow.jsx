@@ -61,8 +61,9 @@ class PortfolioCoverflow extends Component {
     };
 
     render() {
+
         return (
-            !this.state.isLoading ?
+            !this.state.isLoading && typeof window !== "undefined" ?
                 <React.Fragment>
                     <Spring from={{opacity: 0}}
                             to={{opacity: 1}}
