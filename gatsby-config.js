@@ -17,7 +17,7 @@ module.exports = {
         {
             resolve: `gatsby-source-drupal`,
             options: {
-                baseUrl: `http://zportfolio.lndo.site/`,
+                baseUrl: 'http://dev-z-portfolio.pantheonsite.io',
                 apiBase: `jsonapi`, // optional, defaults to `jsonapi`
             }
         }

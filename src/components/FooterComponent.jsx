@@ -4,6 +4,7 @@ import {Layout} from "antd";
 import {colorPrimary} from "../shared/css/theme";
 import {IoIosMail, IoLogoSkype, IoIosPaperPlane} from 'react-icons/io';
 import {IconContext} from "react-icons";
+import {Spring} from "react-spring";
 
 
 const {Footer} = Layout;
@@ -51,36 +52,41 @@ const CopyRight = styled.div`
 class FooterComponent extends Component {
     render() {
         return (
-            <StyledFooter>
-                <Contacts>
-                <FooterItem>
-                    <IconContext.Provider value={{size: "24px"}}>
-                        <IoIosMail/>
-                    </IconContext.Provider>
-                    &nbsp;
-                    maxim.zviagintsev@gmail.com
-                </FooterItem>
+            <Spring from={{opacity: 0}}
+                    to={{opacity: 1}}
+                    config={{tension: 10, friction: 40, delay: 1000}}>
+                {styles => <StyledFooter style={styles}>
+                    <Contacts>
+                        <FooterItem>
+                            <IconContext.Provider value={{size: "24px"}}>
+                                <IoIosMail/>
+                            </IconContext.Provider>
+                            &nbsp;
+                            maxim.zviagintsev@gmail.com
+                        </FooterItem>
 
-                <FooterItem>
-                    <IconContext.Provider value={{size: "24px"}}>
-                        <IoLogoSkype/>
-                    </IconContext.Provider>
-                    &nbsp;
-                    Skype ID: maxim.zviagintsev
-                </FooterItem>
+                        <FooterItem>
+                            <IconContext.Provider value={{size: "24px"}}>
+                                <IoLogoSkype/>
+                            </IconContext.Provider>
+                            &nbsp;
+                            Skype ID: maxim.zviagintsev
+                        </FooterItem>
 
-                <FooterItem>
-                    <IconContext.Provider value={{size: "24px"}}>
-                        <IoIosPaperPlane/>
-                    </IconContext.Provider>
-                        &nbsp;
-                        Telegram ID: max_zviagintsev
-                </FooterItem>
-                </Contacts>
+                        <FooterItem>
+                            <IconContext.Provider value={{size: "24px"}}>
+                                <IoIosPaperPlane/>
+                            </IconContext.Provider>
+                            &nbsp;
+                            Telegram ID: max_zviagintsev
+                        </FooterItem>
+                    </Contacts>
 
-                <CopyRight>Visual art by Yi Liu. © 2019 Maxim Zviagintsev All Rights Reserved.</CopyRight>
+                    <CopyRight>Visual art by Yi Liu. © 2019 Maxim Zviagintsev All Rights Reserved.</CopyRight>
 
-            </StyledFooter>
+                </StyledFooter>
+                }
+            </Spring>
         );
     }
 }

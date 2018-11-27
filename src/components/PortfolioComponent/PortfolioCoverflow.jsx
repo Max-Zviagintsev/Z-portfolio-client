@@ -4,7 +4,7 @@ import {URL} from "../../shared/glabal_variables";
 import Loader from 'react-loader-spinner';
 import styled from "styled-components";
 import CurrentProject from "./CurrentProject";
-import {Transition} from 'react-spring';
+import {Spring, Transition} from 'react-spring';
 import {IconContext} from "react-icons";
 import {IoIosArrowRoundUp} from 'react-icons/io';
 import {colorPrimary} from '../../shared/css/theme.js';
@@ -63,20 +63,26 @@ class PortfolioCoverflow extends Component {
     render() {
         return (
             !this.state.isLoading ?
-                <div>
-                    <Coverflow
-                        width={960}
-                        height={480}
-                        displayQuantityOfSide={1}
-                        enableHeading={false}
-                    >
-                        {this.state.fetchedData.map((item, index) =>
-                            <img src={`${URL}${item.node.relationships.field_project_cover.uri.url}`}
-                                 alt={'Portfolio item ' + index}
-                                 onClick={() => this.handleCurrentProject(item, index)}
-                                 key={index}/>
-                        )}
-                    </Coverflow>
+                <React.Fragment>
+                    <Spring from={{opacity: 0}}
+                            to={{opacity: 1}}
+                            config={{tension: 10, friction: 40, delay: 500}}>
+                        {styles => <div style={styles}>
+                            <Coverflow
+                                width={960}
+                                height={480}
+                                displayQuantityOfSide={1}
+                                enableHeading={false}
+                            >
+                                {this.state.fetchedData.map((item, index) =>
+                                    <img src={`${URL}${item.node.relationships.field_project_cover.uri.url}`}
+                                         alt={'Portfolio item ' + index}
+                                         onClick={() => this.handleCurrentProject(item, index)}
+                                         key={index}/>
+                                )}
+                            </Coverflow>
+                        </div>}
+                    </Spring>
                     {this.state.currentProject != null ?
                         <Transition
                             from={{opacity: 0}}
@@ -87,15 +93,18 @@ class PortfolioCoverflow extends Component {
                             </div>}
                         </Transition>
                         :
-                        <HelperWrapper>
-                            <IconContext.Provider value={{color: colorPrimary, size: '72px'}}>
-                                <IoIosArrowRoundUp/>
-                            </IconContext.Provider>
-                            <HelperText>Click for project details</HelperText>
-                        </HelperWrapper>
+                        <Spring from={{opacity: 0}}
+                                to={{opacity: 1}}
+                                config={{tension: 10, friction: 40, delay: 1000}}>
+                            {styles => <HelperWrapper style={styles}>
+                                <IconContext.Provider value={{color: colorPrimary, size: '72px'}}>
+                                    <IoIosArrowRoundUp/>
+                                </IconContext.Provider>
+                                <HelperText>Click for project details</HelperText>
+                            </HelperWrapper>}
+                        </Spring>
                     }
-
-                </div>
+                </React.Fragment>
                 :
                 <StyledWrapper>
                     <Loader

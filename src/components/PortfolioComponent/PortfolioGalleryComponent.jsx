@@ -7,6 +7,7 @@ import Measure from 'react-measure';
 
 
 import {URL} from "../../shared/glabal_variables";
+import {Spring} from "react-spring";
 
 // CSS starts
 const StyledWrapper = styled.div`
@@ -90,28 +91,34 @@ class PortfolioGalleryComponent extends Component {
 
         return (
             !this.state.isLoading ?
-                <Measure bounds onResize={(contentRect) => this.setState({width: contentRect.bounds.width})}>
-                    {
-                        ({measureRef}) => {
-                            if (width < 1) {
-                                return <div ref={measureRef}></div>;
+                <Spring from={{opacity: 0}}
+                        to={{opacity: 1}}
+                        config={{tension: 10, friction: 40, delay: 1000}}>
+                    {styles => <div style={styles}>
+                        <Measure bounds onResize={(contentRect) => this.setState({width: contentRect.bounds.width})}>
+                            {
+                                ({measureRef}) => {
+                                    if (width < 1) {
+                                        return <div ref={measureRef}></div>;
+                                    }
+                                    let columns = 1;
+                                    if (width >= 780) {
+                                        columns = 2;
+                                    }
+                                    return <div ref={measureRef}><Gallery photos={photos} columns={columns}
+                                                                          onClick={this.openLightbox}/>
+                                        <Lightbox images={photos}
+                                                  onClose={this.closeLightbox}
+                                                  onClickPrev={this.gotoPrevious}
+                                                  onClickNext={this.gotoNext}
+                                                  currentImage={this.state.currentImage}
+                                                  isOpen={this.state.lightboxIsOpen}
+                                        /></div>
+                                }
                             }
-                            let columns = 1;
-                            if (width >= 780) {
-                                columns = 2;
-                            }
-                            return <div ref={measureRef}><Gallery photos={photos} columns={columns}
-                                                                  onClick={this.openLightbox}/>
-                                <Lightbox images={photos}
-                                          onClose={this.closeLightbox}
-                                          onClickPrev={this.gotoPrevious}
-                                          onClickNext={this.gotoNext}
-                                          currentImage={this.state.currentImage}
-                                          isOpen={this.state.lightboxIsOpen}
-                                /></div>
-                        }
-                    }
-                </Measure>
+                        </Measure>
+                    </div>}
+                </Spring>
                 :
                 <StyledWrapper>
                     <Loader
