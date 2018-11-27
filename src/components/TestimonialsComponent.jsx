@@ -35,7 +35,7 @@ const StyledInterface = styled.img`
 const TestimonialsInner = styled.div`
       font-family: "Exo 2.0";
       font-size: ${(props) => props.theme.fontSizeRegular};
-      height: inherit;
+      height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
