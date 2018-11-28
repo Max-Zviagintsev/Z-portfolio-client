@@ -72,7 +72,7 @@ const Portfolio = ({data}) => {
         <Layout>
             <Helmet>
                 <meta charSet="utf-8" name="Max Z." content="Z-Works"/>
-                <title>Z-Works</title>
+                <title>Z-Projects</title>
                 <link rel="canonical" href="https://z-portfolio.tk/portfolio/"/>
             </Helmet>
             <StyledHeader>
