@@ -10,6 +10,7 @@ import MySkillsComponent from "../components/MySkillsComponent";
 import TestimonialsComponent from "../components/TestimonialsComponent";
 import {graphql} from "gatsby";
 import FooterComponent from "../components/FooterComponent";
+import {Helmet} from "react-helmet";
 
 export const query = graphql`
                        query {allNodeTestimonials{
@@ -39,6 +40,11 @@ const StyledHeader = styled(Header)`
 const Home = ({data}) => {
     return (
         <Layout>
+            <Helmet>
+                <meta charSet="utf-8" name="Max Z." content="Max Z. Web Developer Portfolio"/>
+                <title>Z-Portfolio</title>
+                <link rel="canonical" href="https://z-portfolio.tk"/>
+            </Helmet>
             <StyledHeader>
                 <NavBar/>
                 <HomeHeroComponent/>

@@ -8,6 +8,7 @@ import {graphql} from 'gatsby';
 import {Spring} from 'react-spring';
 import FooterComponent from "../components/FooterComponent";
 import {colorPrimary, textColorOnWhite} from '../shared/css/theme.js';
+import {Helmet} from "react-helmet";
 
 export const query = graphql`
             query{
@@ -49,6 +50,11 @@ const StyledH1 = styled.h1`
 const Gallery = ({data}) => {
     return (
         <Layout>
+            <Helmet>
+                <meta charSet="utf-8" name="Max Z." content="Z-Portfolio Gallery"/>
+                <title>Z-Gallery</title>
+                <link rel="canonical" href="https://z-portfolio.tk/gallery/"/>
+            </Helmet>
             <StyledHeader>
                 <NavBar/>
             </StyledHeader>

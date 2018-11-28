@@ -6,6 +6,7 @@ import NavBar from "../components/NavBar/NavBar";
 import FooterComponent from "../components/FooterComponent";
 import GlobalStyle from "../shared/css/globalStyles";
 import AboutMeComponent from "../components/AboutMeComponent";
+import {Helmet} from "react-helmet";
 
 const StyledTop = styled.div`
       background: url(${background}) rgba(45, 37, 26, 1) no-repeat fixed;
@@ -14,6 +15,11 @@ const StyledTop = styled.div`
 const AboutMe = () => {
     return (
         <Layout>
+            <Helmet>
+                <meta charSet="utf-8" name="Max Z." content="About me"/>
+                <title>About me</title>
+                <link rel="canonical" href="https://z-portfolio.tk/about-me/"/>
+            </Helmet>
             <StyledTop>
                 <NavBar/>
                 <AboutMeComponent/>

@@ -9,6 +9,7 @@ import {Spring} from 'react-spring';
 import FooterComponent from "../components/FooterComponent";
 
 import {colorPrimary, textColorOnWhite} from '../shared/css/theme.js';
+import {Helmet} from "react-helmet";
 
 export const query = graphql`
                             query {
@@ -69,6 +70,11 @@ const StyledH1 = styled.h1`
 const Portfolio = ({data}) => {
     return (
         <Layout>
+            <Helmet>
+                <meta charSet="utf-8" name="Max Z." content="Z-Works"/>
+                <title>Z-Works</title>
+                <link rel="canonical" href="https://z-portfolio.tk/portfolio/"/>
+            </Helmet>
             <StyledHeader>
                 <NavBar/>
             </StyledHeader>
