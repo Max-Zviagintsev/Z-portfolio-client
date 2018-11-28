@@ -71,8 +71,8 @@ const Portfolio = ({data}) => {
     return (
         <Layout>
             <Helmet>
-                <meta charSet="utf-8" name="Max Z." content="Z-Works"/>
-                <title>Z-Projects</title>
+                <meta charSet="utf-8" name="Max Z." content="Portfolio"/>
+                <title>Projects</title>
                 <link rel="canonical" href="https://z-portfolio.tk/portfolio/"/>
             </Helmet>
             <StyledHeader>

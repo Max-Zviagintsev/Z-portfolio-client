@@ -42,7 +42,7 @@ const Home = ({data}) => {
         <Layout>
             <Helmet>
                 <meta charSet="utf-8" name="Max Z." content="Max Z. Web Developer Portfolio"/>
-                <title>Z-Portfolio</title>
+                <title>Portfolio</title>
                 <link rel="canonical" href="https://z-portfolio.tk"/>
             </Helmet>
             <StyledHeader>

@@ -51,8 +51,8 @@ const Gallery = ({data}) => {
     return (
         <Layout>
             <Helmet>
-                <meta charSet="utf-8" name="Max Z." content="Z-Portfolio Gallery"/>
-                <title>Z-Gallery</title>
+                <meta charSet="utf-8" name="Max Z." content="Gallery"/>
+                <title>Gallery</title>
                 <link rel="canonical" href="https://z-portfolio.tk/gallery/"/>
             </Helmet>
             <StyledHeader>
