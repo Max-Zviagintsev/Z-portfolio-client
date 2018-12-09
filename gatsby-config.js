@@ -6,7 +6,7 @@ module.exports = {
         `gatsby-plugin-styled-components`,
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-sitemap`,
-        `gatsby-plugin-favicon`,
+        //`gatsby-plugin-favicon`,
         'gatsby-plugin-antd',
         {
             resolve: `gatsby-plugin-less`,
@@ -47,7 +47,7 @@ module.exports = {
                 cookieDomain: "https://z-portfolio.tk/",
             },
         },
-        {
+        /*{
             resolve: `gatsby-plugin-favicon`,
             options: {
                 logo: "./src/favicon.png",
@@ -79,6 +79,6 @@ module.exports = {
                     windows: false
                 }
             }
-        }
+        }*/
     ]
 };
