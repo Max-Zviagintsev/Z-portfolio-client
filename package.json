@@ -28,6 +28,7 @@
     "react-animated-slider": "^1.1.4",
     "react-coverflow": "^0.2.16",
     "react-dom": "^16.5.1",
+    "react-favicon": "^0.0.14",
     "react-helmet": "^5.2.0",
     "react-icons": "^3.2.2",
     "react-images": "^0.5.19",

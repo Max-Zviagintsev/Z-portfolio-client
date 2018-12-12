@@ -12,6 +12,7 @@ import { FaReact, FaDrupal, FaDatabase, FaPhp } from 'react-icons/fa';
 
 const SkillsWrapper = styled.div`
       background: url(${SkillsBackground}) rgba(22, 22, 24, 1) no-repeat fixed center;
+      background-size: cover;
       padding: 5px 15px 50px 15px;
       min-height: 503px;
 `;

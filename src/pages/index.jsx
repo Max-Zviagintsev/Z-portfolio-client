@@ -29,7 +29,8 @@ const {Header, Content} = Layout;
 // CSS starts
 const StyledHeader = styled(Header)`
       height: 800px;
-      background: url(${background}) rgba(8, 14, 12, 1) no-repeat fixed;
+      background: url(${background}) rgba(15, 36, 39, 1) no-repeat center fixed;
+      background-size: cover;
       
       @media(min-width: 1600px) {
       height: 1080px;

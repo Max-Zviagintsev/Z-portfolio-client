@@ -9,7 +9,8 @@ import AboutMeComponent from "../components/AboutMeComponent";
 import {Helmet} from "react-helmet";
 
 const StyledTop = styled.div`
-      background: url(${background}) rgba(45, 37, 26, 1) no-repeat fixed;
+      background: url(${background}) rgba(28, 37, 44, 1) no-repeat center fixed;
+      background-size: cover;
 `;
 
 const AboutMe = () => {
