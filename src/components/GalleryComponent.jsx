@@ -7,7 +7,7 @@ import Measure from 'react-measure';
 import {colorPrimary} from '../shared/css/theme.js';
 
 import {URL} from "../shared/glabal_variables";
-import {Spring} from "react-spring";
+import {Spring} from 'react-spring/renderprops';
 
 // CSS starts
 const StyledWrapper = styled.div`

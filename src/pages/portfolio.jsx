@@ -5,7 +5,7 @@ import {Layout} from "antd";
 import NavBar from "../components/NavBar/NavBar";
 import GlobalStyle from "../shared/css/globalStyles";
 import styled from "styled-components";
-import {Spring} from 'react-spring';
+import {Spring} from 'react-spring/renderprops';
 import FooterComponent from "../components/FooterComponent";
 
 import {colorPrimary, textColorOnWhite} from '../shared/css/theme.js';

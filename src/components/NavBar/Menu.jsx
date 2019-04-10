@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
-import {Keyframes, animated, config} from 'react-spring';
+import {Keyframes, animated, config} from 'react-spring/renderprops';
 import delay from 'delay';
 import {Icon} from 'antd';
 import {Link} from 'gatsby';

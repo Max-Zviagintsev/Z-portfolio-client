@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import styled from "styled-components";
-import {Spring} from 'react-spring';
-import Waypoint from 'react-waypoint';
+import {Spring} from 'react-spring/renderprops';
+import {Waypoint} from 'react-waypoint';
 import Loader from 'react-loader-spinner';
 import Typist from 'react-typist';
 

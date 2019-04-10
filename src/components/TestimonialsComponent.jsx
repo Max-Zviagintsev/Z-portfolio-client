@@ -4,8 +4,8 @@ import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/vertical.css';
 import Loader from "react-loader-spinner";
 import {colorPrimary, textColorOnWhite} from "../shared/css/theme";
-import Waypoint from "react-waypoint";
-import {Spring} from "react-spring";
+import {Waypoint} from "react-waypoint";
+import {Spring} from 'react-spring/renderprops';
 import Interface from '../../assets/interface.gif';
 
 // CSS starts

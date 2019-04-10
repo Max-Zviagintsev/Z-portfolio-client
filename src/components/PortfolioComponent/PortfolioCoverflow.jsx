@@ -4,7 +4,7 @@ import {URL} from "../../shared/glabal_variables";
 import Loader from 'react-loader-spinner';
 import styled from "styled-components";
 import CurrentProject from "./CurrentProject";
-import {Spring, Transition} from 'react-spring';
+import {Spring, Transition} from 'react-spring/renderprops';
 import {IconContext} from "react-icons";
 import {IoIosArrowRoundUp} from 'react-icons/io';
 import {colorPrimary} from '../../shared/css/theme.js';

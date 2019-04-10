@@ -2,7 +2,7 @@ import React from 'react';
 import {Row, Col} from 'antd';
 import styled from "styled-components";
 import PortfolioGalleryComponent from "./PortfolioGalleryComponent";
-import {Spring} from 'react-spring';
+import {Spring} from 'react-spring/renderprops';
 
 // CSS starts
 const StyledWrapper = styled.div`

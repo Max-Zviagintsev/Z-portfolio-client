@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {Animated} from "react-animated-css";
 import styled from "styled-components";
-import {Spring} from 'react-spring';
-import Waypoint from 'react-waypoint';
+import {Spring} from 'react-spring/renderprops';
+import {Waypoint} from 'react-waypoint';
 import {colorPrimary, textColorOnWhite} from "../shared/css/theme";
 import SkillsBackground from '../../assets/Skills_Background.png';
 

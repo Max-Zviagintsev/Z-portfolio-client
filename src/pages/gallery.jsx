@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import GlobalStyle from '../shared/css/globalStyles';
 import GalleryComponent from "../components/GalleryComponent";
 import {graphql} from 'gatsby';
-import {Spring} from 'react-spring';
+import {Spring} from 'react-spring/renderprops';
 import FooterComponent from "../components/FooterComponent";
 import {colorPrimary, textColorOnWhite} from '../shared/css/theme.js';
 import {Helmet} from "react-helmet";

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Spring} from 'react-spring';
+import {Spring} from 'react-spring/renderprops';
 
 const Hero = styled.div`
       font-family: "Ailerons-Typeface";

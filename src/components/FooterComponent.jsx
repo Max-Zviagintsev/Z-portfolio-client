@@ -4,7 +4,7 @@ import {Layout} from "antd";
 import {colorPrimary} from "../shared/css/theme";
 import {IoIosMail, IoLogoSkype, IoIosPaperPlane} from 'react-icons/io';
 import {IconContext} from "react-icons";
-import {Spring} from "react-spring";
+import {Spring} from 'react-spring/renderprops';
 
 
 const {Footer} = Layout;
