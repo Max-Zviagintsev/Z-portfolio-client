@@ -105,7 +105,7 @@ const Middle = styled.div`
 const IconWrapper = styled.div`
       position: absolute;
       margin-top: 40px;
-      margin-left: 180px;
+      margin-left: 100px;
       box-shadow: 0 0 20px rgba(20, 20, 20, 0.9);
       background-color: rgba(20, 20, 20, 0.6);
       border-radius: 50%;
