@@ -54,13 +54,13 @@ const AboutMeComponent = () => {
         <Wrapper>
             <Spring from={{backgroundColor: 'rgba(20, 20, 20, 0)'}}
                     to={{backgroundColor: 'rgba(20, 20, 20, 0.6)'}}
-                    config={{tension: 10, friction: 70, delay: 1000}}>
+                    config={{tension: 10, friction: 20, delay: 1000}}>
                 {styles => <Background style={styles}>
 
                     <Spring
                         from={{opacity: 0}}
                         to={{opacity: 1}}
-                        config={{tension: 10, friction: 40, delay: 1000}}>
+                        config={{tension: 10, friction: 15, delay: 1000}}>
                         {styles => <Inner style={styles}>
                             <TopWrapper>
                                 <Portrait src={portrait} alt="MaxZ"

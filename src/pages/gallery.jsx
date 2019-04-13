@@ -62,7 +62,7 @@ const Gallery = ({data}) => {
                 <Spring
                     from={{color: textColorOnWhite}}
                     to={{color:colorPrimary}}
-                    config={{tension: 10, friction: 60, delay: 500}}>
+                    config={{tension: 10, friction: 10, delay: 500}}>
                     {props => <StyledH1 style={props}>My work</StyledH1>}
                 </Spring>
 

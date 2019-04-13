@@ -4,28 +4,30 @@ import {Keyframes, animated} from 'react-spring/renderprops';
 import delay from 'delay';
 import {Icon} from 'antd';
 import {Link} from 'gatsby';
+import {IoLogoGithub} from 'react-icons/io';
+import {IconContext} from "react-icons/lib";
 
 // Creates a spring with predefined animation slots
 const Sidebar = Keyframes.Spring({
     // Slots can take arrays/chains,
-    peek: [{ x: 0, from: { x: -100 }, delay: 500 }, { x: -100, delay: 800 }],
+    peek: [{x: 0, from: {x: -100}, delay: 500}, {x: -100, delay: 800}],
     // single items,
-    open: { delay: 0, x: 0 },
+    open: {delay: 0, x: 0},
     // or async functions with side-effects
     close: async call => {
         await delay(400)
-        await call({ delay: 0, x: -100 })
+        await call({delay: 0, x: -100})
     },
 });
 
 // Creates a keyframed trail
 const Content = Keyframes.Trail({
     peek: [
-        { x: 0, opacity: 1, from: { x: -100, opacity: 0 }, delay: 600 },
-        { x: -100, opacity: 0, delay: 0 },
+        {x: 0, opacity: 1, from: {x: -100, opacity: 0}, delay: 600},
+        {x: -100, opacity: 0, delay: 0},
     ],
-    open: { x: 0, opacity: 1, delay: 100 },
-    close: { x: -100, opacity: 0, delay: 0 },
+    open: {x: 0, opacity: 1, delay: 100},
+    close: {x: -100, opacity: 0, delay: 0},
 })
 
 const items = [
@@ -100,6 +102,22 @@ const Middle = styled.div`
               font-size: ${(props) => props.theme.fontSizeRegular};
               z-index: 100;
 `;
+const IconWrapper = styled.div`
+      position: absolute;
+      margin-top: 40px;
+      margin-left: 180px;
+      box-shadow: 0 0 20px rgba(20, 20, 20, 0.9);
+      background-color: rgba(20, 20, 20, 0.6);
+      border-radius: 50%;
+      z-index: 100;
+      cursor: pointer;
+`;
+const StyledLink = styled.a`
+      color: ${(props) => props.theme.colorPrimary};
+      &:hover {
+      color: ${(props) => props.theme.colorPrimary};
+      }
+`;
 
 // CSS ends
 
@@ -107,7 +125,7 @@ class Menu extends React.Component {
     state = {
         open: false
     };
-    toggle = () => this.setState(state => ({ open: !state.open }));
+    toggle = () => this.setState(state => ({open: !state.open}));
 
     render() {
         const state =
@@ -120,6 +138,14 @@ class Menu extends React.Component {
         return (
             <div>
                 <StyledIcon type={`menu-${icon}`} onClick={this.toggle}/>
+                <IconWrapper>
+                    <StyledLink href="https://github.com/Max-Zviagintsev" target="_blank">
+                        <IconContext.Provider value={{size: "26px"}}>
+                            <IoLogoGithub/>
+                        </IconContext.Provider>
+                    </StyledLink>
+                </IconWrapper>
+
                 <Sidebar native state={state}>
                     {({x}) => (
                         <animated.div
@@ -133,7 +159,7 @@ class Menu extends React.Component {
                                 keys={items.map((_, i) => i)}
                                 reverse={!this.state.open}
                                 state={state}>
-                                {(item, i) => ({ x, ...props }) => (
+                                {(item, i) => ({x, ...props}) => (
                                     <animated.div
                                         style={{
                                             transform: x.interpolate(x => `translate3d(${x}%,0,0)`),

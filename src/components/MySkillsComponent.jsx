@@ -107,7 +107,7 @@ class MySkillsComponent extends Component {
                 <Spring
                     from={{color: textColorOnWhite}}
                     to={{color: `${this.state.showMySkills}`}}
-                    config={{tension: 10, friction: 40}}>
+                    config={{tension: 10, friction: 10}}>
                     {props => <StyledH1 style={props}>My skills</StyledH1>}
                 </Spring>
 

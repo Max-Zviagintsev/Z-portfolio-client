@@ -61,13 +61,14 @@ class PortfolioCoverflow extends Component {
     };
 
     render() {
+        const show = <CurrentProject projectData={this.state.currentProject}/>;
 
         return (
             !this.state.isLoading && typeof window !== "undefined" ?
                 <React.Fragment>
                     <Spring from={{opacity: 0}}
                             to={{opacity: 1}}
-                            config={{tension: 10, friction: 40, delay: 500}}>
+                            config={{tension: 10, friction: 10, delay: 500}}>
                         {styles => <div style={styles}>
                             <Coverflow
                                 width={960}
@@ -85,20 +86,20 @@ class PortfolioCoverflow extends Component {
                         </div>}
                     </Spring>
                     {this.state.currentProject != null ?
-                        <CurrentProject projectData={this.state.currentProject}/>
-                       /* <Transition
+                        <Transition
+                            items={show}
                             from={{opacity: 0}}
                             enter={{opacity: 1}}
                             leave={{opacity: 0}}
                             config={{tension: 10, friction: 10}}>
-                            {styles => <div style={styles}>
-                                <CurrentProject projectData={this.state.currentProject}/>
-                            </div>}
-                        </Transition>*/
+                            {show => show && (props => <div style={props}>
+                                {show}
+                                ️</div>)}
+                        </Transition>
                         :
                         <Spring from={{opacity: 0}}
                                 to={{opacity: 1}}
-                                config={{tension: 10, friction: 40, delay: 1000}}>
+                                config={{tension: 10, friction: 10, delay: 1000}}>
                             {styles => <HelperWrapper style={styles}>
                                 <IconContext.Provider value={{color: colorPrimary, size: '72px'}}>
                                     <IoIosArrowRoundUp/>

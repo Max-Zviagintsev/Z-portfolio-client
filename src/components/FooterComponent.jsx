@@ -54,7 +54,7 @@ class FooterComponent extends Component {
         return (
             <Spring from={{opacity: 0}}
                     to={{opacity: 1}}
-                    config={{tension: 10, friction: 40, delay: 1000}}>
+                    config={{tension: 10, friction: 10}}>
                 {styles => <StyledFooter style={styles}>
                     <Contacts>
                         <FooterItem>

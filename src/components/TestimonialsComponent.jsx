@@ -102,7 +102,7 @@ class TestimonialsComponent extends Component {
                     <Spring
                         from={{color: textColorOnWhite}}
                         to={{color: `${this.state.showHeading}`}}
-                        config={{tension: 10, friction: 40, delay: 500}}>
+                        config={{tension: 10, friction: 10, delay: 500}}>
                         {props => <StyledH1 style={props}>Testimonials</StyledH1>}
                     </Spring>
 

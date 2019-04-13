@@ -82,7 +82,7 @@ class GalleryComponent extends Component {
             !this.state.isLoading ?
                 <Spring from={{opacity: 0}}
                         to={{opacity: 1}}
-                        config={{tension: 10, friction: 40, delay: 500}}>
+                        config={{tension: 10, friction: 15, delay: 500}}>
                     {styles => <div style={styles}>
                         <Measure bounds onResize={(contentRect) => this.setState({width: contentRect.bounds.width})}>
                             {

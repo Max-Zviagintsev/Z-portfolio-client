@@ -147,7 +147,7 @@ class MyTechComponent extends Component {
                 <Spring
                     from={{color: textColorOnWhite}}
                     to={{color: `${this.state.showMyTech}`}}
-                    config={{tension: 10, friction: 40, delay: 500}}>
+                    config={{tension: 10, friction: 10, delay: 500}}>
                     {props => <StyledH1 style={props}>My Tech</StyledH1>}
                 </Spring>
 
@@ -223,7 +223,7 @@ class MyTechComponent extends Component {
                     <Spring
                         from={{backgroundColor: textColorOnWhite}}
                         to={{backgroundColor: `${this.state.showBorder}`}}
-                        config={{tension: 10, friction: 40, delay: 500}}>
+                        config={{tension: 10, friction: 10, delay: 500}}>
                         {props =>
                             <MiddleDiv style={props}>&nbsp;</MiddleDiv>}
                     </Spring>
