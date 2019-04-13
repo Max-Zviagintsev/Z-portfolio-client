@@ -1,27 +1,32 @@
-import React, {Component} from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import {Keyframes, animated, config} from 'react-spring/renderprops';
+import {Keyframes, animated} from 'react-spring/renderprops';
 import delay from 'delay';
 import {Icon} from 'antd';
 import {Link} from 'gatsby';
 
 // Creates a spring with predefined animation slots
 const Sidebar = Keyframes.Spring({
-
+    // Slots can take arrays/chains,
+    peek: [{ x: 0, from: { x: -100 }, delay: 500 }, { x: -100, delay: 800 }],
     // single items,
-    open: {to: {x: 0}, config: config.default},
+    open: { delay: 0, x: 0 },
     // or async functions with side-effects
     close: async call => {
         await delay(400)
-        await call({to: {x: -100}, config: config.gentle})
-    }
+        await call({ delay: 0, x: -100 })
+    },
 });
 
 // Creates a keyframed trail
 const Content = Keyframes.Trail({
-    open: {delay: 100, to: {x: 0, opacity: 1}},
-    close: {to: {x: -100, opacity: 0}}
-});
+    peek: [
+        { x: 0, opacity: 1, from: { x: -100, opacity: 0 }, delay: 600 },
+        { x: -100, opacity: 0, delay: 0 },
+    ],
+    open: { x: 0, opacity: 1, delay: 100 },
+    close: { x: -100, opacity: 0, delay: 0 },
+})
 
 const items = [
 
@@ -98,39 +103,37 @@ const Middle = styled.div`
 
 // CSS ends
 
-class Menu extends Component {
-    constructor() {
-        super();
-        this.state = {open: false};
-    }
-
+class Menu extends React.Component {
+    state = {
+        open: false
+    };
+    toggle = () => this.setState(state => ({ open: !state.open }));
 
     render() {
-        const {open} = this.state;
+        const state =
+            this.state.open === false
+                ? 'close'
+                : 'open';
 
-        const toggle = () => {
-            !open ?
-                this.setState({
-                    open: true
-                }) :
-                this.setState({
-                    open: false
-                })
-        };
-
-        const state = !open ? 'close' : 'open';
-        const icon = open ? 'fold' : 'unfold';
+        const icon = this.state.open ? 'fold' : 'unfold';
 
         return (
             <div>
-                <StyledIcon type={`menu-${icon}`} onClick={toggle}/>
+                <StyledIcon type={`menu-${icon}`} onClick={this.toggle}/>
                 <Sidebar native state={state}>
                     {({x}) => (
                         <animated.div
-                            style={{transform: x.interpolate(x => `translate3d(${x}%,0,0)`)}}>
-                            <Content native keys={items.map((_, i) => i)} config={{tension: 200, friction: 20}}
-                                     state={state}>
-                                {items.map((item, i) => ({x, ...props}) => (
+                            className="sidebar"
+                            style={{
+                                transform: x.interpolate(x => `translate3d(${x}%,0,0)`),
+                            }}>
+                            <Content
+                                native
+                                items={items}
+                                keys={items.map((_, i) => i)}
+                                reverse={!this.state.open}
+                                state={state}>
+                                {(item, i) => ({ x, ...props }) => (
                                     <animated.div
                                         style={{
                                             transform: x.interpolate(x => `translate3d(${x}%,0,0)`),
@@ -146,7 +149,7 @@ class Menu extends Component {
                                         }}>
                                         {i === 0 ? <First>{item}</First> : <Middle>{item}</Middle>}
                                     </animated.div>
-                                ))}
+                                )}
                             </Content>
                         </animated.div>
                     )}

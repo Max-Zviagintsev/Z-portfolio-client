@@ -85,14 +85,16 @@ class PortfolioCoverflow extends Component {
                         </div>}
                     </Spring>
                     {this.state.currentProject != null ?
-                        <Transition
+                        <CurrentProject projectData={this.state.currentProject}/>
+                       /* <Transition
                             from={{opacity: 0}}
                             enter={{opacity: 1}}
                             leave={{opacity: 0}}
                             config={{tension: 10, friction: 10}}>
-                            {styles => <div style={styles}><CurrentProject projectData={this.state.currentProject}/>
+                            {styles => <div style={styles}>
+                                <CurrentProject projectData={this.state.currentProject}/>
                             </div>}
-                        </Transition>
+                        </Transition>*/
                         :
                         <Spring from={{opacity: 0}}
                                 to={{opacity: 1}}
