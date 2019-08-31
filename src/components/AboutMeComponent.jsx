@@ -70,6 +70,14 @@ const AboutMeComponent = () => {
                                     <p>I create beautiful websites and apps</p>
                                 </TopInner>
                             </TopWrapper>
+                            <Text>My primary role in the projects in which I participated in recent years is a React
+                                Engineer.
+                                I build any kinds of React apps from small SPA to large and complex apps with
+                                Redux-based complicated data structure.
+                                I fell in love with Typescript, so I use it as my main programming language.
+                                I’ve also worked with all popular UI Frameworks. My personal choice is Ant Design
+                                because of the most powerful API,
+                                the largest variety of components and regular updates.</Text>
                             <Text> If you need a website or app, you probably want a Content Management System to
                                 edit your pages, products, articles and blogs without touching a code, otherwise you
                                 have to hire a developer for managing your content.</Text>
@@ -84,11 +92,6 @@ const AboutMeComponent = () => {
                                 developer-friendly and amazingly flexible. If you need something more complex than a
                                 personal blog or brochure and expect a heavy traffic load, there is no alternative to
                                 Drupal.</Text>
-                            <Text>As for the Front-End, we’re entering the world of modern JavaScript. No doubt that
-                                React.js is a major player there and for a good reason. You can go for a completely
-                                headless solution and host your project in outstanding Node.js ecosystem using
-                                Express.js, Create React App, Gatsby.js, Next.js, React Apollo – all these tools are
-                                gaining crazy popularity nowadays.</Text>
                             <Text>I have a visual designer partner, so together we are able to complete both programming
                                 and graphics.</Text>
                             <Text>In the past I held leading positions in local and international world-known companies

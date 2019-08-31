@@ -6,8 +6,18 @@ import {Waypoint} from 'react-waypoint';
 import {colorPrimary, textColorOnWhite} from "../shared/css/theme";
 import SkillsBackground from '../../assets/Skills_Background.png';
 
-import { IoLogoJavascript, IoLogoHtml5, IoLogoCss3, IoLogoNodejs, IoMdLeaf, IoIosSpeedometer, IoIosTrendingUp, IoLogoUsd, IoIosGitNetwork, IoIosRocket } from 'react-icons/io';
-import { FaReact, FaDrupal, FaDatabase, FaPhp } from 'react-icons/fa';
+import {
+    IoLogoHtml5,
+    IoLogoCss3,
+    IoLogoNodejs,
+    IoMdLeaf,
+    IoIosSpeedometer,
+    IoIosTrendingUp,
+    IoLogoUsd,
+    IoIosGitNetwork,
+    IoIosRocket
+} from 'react-icons/io';
+import {FaReact, FaDrupal, FaDatabase, FaPhp} from 'react-icons/fa';
 
 
 const SkillsWrapper = styled.div`
@@ -113,23 +123,23 @@ class MySkillsComponent extends Component {
 
                 <Waypoint onEnter={this.showFirstRow}/>
                 {this.state.showFirstRow ?
-                <SkillRow>
-                    <Animated animationIn="bounceInDown" animationOut="fadeOut" isVisible={true}>
-                        <StyledTech> <IoLogoJavascript />&nbsp;JavaScript</StyledTech>
-                    </Animated>
+                    <SkillRow>
+                        <Animated animationIn="bounceInDown" animationOut="fadeOut" isVisible={true}>
+                            <StyledTech>TypeScript</StyledTech>
+                        </Animated>
 
-                </SkillRow> : null
+                    </SkillRow> : null
                 }
 
                 <Waypoint onEnter={this.showSecondRow}/>
                 {this.state.showSecondRow ?
                     <SkillRow>
                         <Animated animationIn="bounceInDown" animationOut="fadeOut" isVisible={true}>
-                            <StyledTech> <IoLogoHtml5 />&nbsp;HTML</StyledTech>
+                            <StyledTech> <IoLogoHtml5/>&nbsp;HTML</StyledTech>
                         </Animated>
 
                         <Animated animationIn="bounceInDown" animationOut="fadeOut" isVisible={true}>
-                            <StyledTech> <IoLogoCss3 />&nbsp;CSS</StyledTech>
+                            <StyledTech> <IoLogoCss3/>&nbsp;CSS</StyledTech>
                         </Animated>
 
                     </SkillRow> : null
@@ -139,15 +149,15 @@ class MySkillsComponent extends Component {
                 {this.state.showThirdRow ?
                     <SkillRow>
                         <Animated animationIn="bounceInDown" animationOut="fadeOut" isVisible={true}>
-                            <StyledTech> <FaReact />&nbsp;React</StyledTech>
+                            <StyledTech> <FaReact/>&nbsp;React</StyledTech>
                         </Animated>
 
                         <Animated animationIn="bounceInDown" animationOut="fadeOut" isVisible={true}>
-                            <StyledTech> <IoLogoNodejs />&nbsp;Node.js</StyledTech>
+                            <StyledTech> <IoLogoNodejs/>&nbsp;Node.js</StyledTech>
                         </Animated>
 
                         <Animated animationIn="bounceInDown" animationOut="fadeOut" isVisible={true}>
-                            <StyledTech> <FaDrupal />&nbsp;Drupal</StyledTech>
+                            <StyledTech> <FaDrupal/>&nbsp;Drupal</StyledTech>
                         </Animated>
 
                     </SkillRow> : null
@@ -157,19 +167,19 @@ class MySkillsComponent extends Component {
                 {this.state.showFourthRow ?
                     <SkillRow>
                         <Animated animationIn="bounceInDown" animationOut="fadeOut" isVisible={true}>
-                            <StyledTech> <IoMdLeaf />&nbsp;MongoDB</StyledTech>
+                            <StyledTech> <IoMdLeaf/>&nbsp;MongoDB</StyledTech>
                         </Animated>
 
                         <Animated animationIn="bounceInDown" animationOut="fadeOut" isVisible={true}>
-                            <StyledTech> <IoIosSpeedometer />&nbsp;Express.js</StyledTech>
+                            <StyledTech> <IoIosSpeedometer/>&nbsp;Express.js</StyledTech>
                         </Animated>
 
                         <Animated animationIn="bounceInDown" animationOut="fadeOut" isVisible={true}>
-                            <StyledTech> <FaDatabase />&nbsp;MySQL</StyledTech>
+                            <StyledTech> <FaDatabase/>&nbsp;MySQL</StyledTech>
                         </Animated>
 
                         <Animated animationIn="bounceInDown" animationOut="fadeOut" isVisible={true}>
-                            <StyledTech><FaPhp />&nbsp;php</StyledTech>
+                            <StyledTech><FaPhp/>&nbsp;php</StyledTech>
                         </Animated>
 
                     </SkillRow> : null
@@ -180,19 +190,19 @@ class MySkillsComponent extends Component {
                     <SkillRow>
 
                         <Animated animationIn="bounceInDown" animationOut="fadeOut" isVisible={true}>
-                            <StyledTech> <IoIosTrendingUp />&nbsp;SEO</StyledTech>
+                            <StyledTech> <IoIosTrendingUp/>&nbsp;SEO</StyledTech>
                         </Animated>
 
                         <Animated animationIn="bounceInDown" animationOut="fadeOut" isVisible={true}>
-                            <StyledTech> <IoLogoUsd />&nbsp;Drupal Commerce</StyledTech>
+                            <StyledTech> <IoLogoUsd/>&nbsp;Drupal Commerce</StyledTech>
                         </Animated>
 
                         <Animated animationIn="bounceInDown" animationOut="fadeOut" isVisible={true}>
-                            <StyledTech> <IoIosGitNetwork />&nbsp;GraphQL</StyledTech>
+                            <StyledTech> <IoIosGitNetwork/>&nbsp;GraphQL</StyledTech>
                         </Animated>
 
                         <Animated animationIn="bounceInDown" animationOut="fadeOut" isVisible={true}>
-                            <StyledTech> <IoIosRocket />&nbsp;Gatsby.js</StyledTech>
+                            <StyledTech> <IoIosRocket/>&nbsp;Gatsby.js</StyledTech>
                         </Animated>
 
                     </SkillRow> : null

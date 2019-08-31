@@ -210,7 +210,8 @@ class MyTechComponent extends Component {
                                 color={colorPrimary}
                                 height="15"
                                 width="15"
-                            />&nbsp;Easy to convert to mobile app with React Native;</TechRow>
+                            />&nbsp;Supports TypeScript for corporate-level code quality and
+                                scalability</TechRow>
                         </Typist>
 
                     </StyledLeftDiv>

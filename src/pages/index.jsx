@@ -13,16 +13,16 @@ import FooterComponent from "../components/FooterComponent";
 import {Helmet} from "react-helmet";
 
 export const query = graphql`
-                       query {allNodeTestimonials{
-                        edges{
-                            node{
-                                field_client,
-                                field_testimonial
-                                }
-                               }
-                              }
-                             }
-                        `;
+    query {allNodeTestimonials{
+        edges{
+            node{
+                field_client,
+                field_testimonial
+            }
+        }
+    }
+    }
+`;
 
 const {Header, Content} = Layout;
 

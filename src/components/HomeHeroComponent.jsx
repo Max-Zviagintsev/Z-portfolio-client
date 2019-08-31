@@ -51,28 +51,28 @@ const HeroText = styled.div`
 const HomeHeroComponent = () => {
     return (
         <Hero>
-                <Spring from={{backgroundColor: 'rgba(20, 20, 20, 0)'}}
-                        to={{backgroundColor: 'rgba(20, 20, 20, 0.6)'}}
-                        config={{tension: 10, friction: 10}}>
-                    {styles => <HeroText style={styles}>
+            <Spring from={{backgroundColor: 'rgba(20, 20, 20, 0)'}}
+                    to={{backgroundColor: 'rgba(20, 20, 20, 0.6)'}}
+                    config={{tension: 10, friction: 10}}>
+                {styles => <HeroText style={styles}>
 
-                        <Spring from={{opacity: 0}}
-                                to={{opacity: 1}}
-                                config={{tension: 10, friction: 20, delay: 1000}}>
-                            {styles => <p style={styles}>Hi, I'm Max Z.</p>}
-                        </Spring>
+                    <Spring from={{opacity: 0}}
+                            to={{opacity: 1}}
+                            config={{tension: 10, friction: 20, delay: 1000}}>
+                        {styles => <p style={styles}>Hi, I'm Max Z.</p>}
+                    </Spring>
 
-                        <Spring from={{opacity: 0}} to={{opacity: 1}}
-                                config={{tension: 10, friction: 20, delay: 2500}}>
-                            {styles => <p style={styles}>I'm a Web Developer</p>}
-                        </Spring>
+                    <Spring from={{opacity: 0}} to={{opacity: 1}}
+                            config={{tension: 10, friction: 20, delay: 2500}}>
+                        {styles => <p style={styles}>I'm a Web Developer</p>}
+                    </Spring>
 
-                        <Spring from={{opacity: 0}} to={{opacity: 1}}
-                                config={{tension: 10, friction: 20, delay: 4000}}>
-                            {styles => <p style={styles}>Obsessed With Technology</p>}
-                        </Spring>
-                    </HeroText>}
-                </Spring>
+                    <Spring from={{opacity: 0}} to={{opacity: 1}}
+                            config={{tension: 10, friction: 20, delay: 4000}}>
+                        {styles => <p style={styles}>Obsessed With Technology</p>}
+                    </Spring>
+                </HeroText>}
+            </Spring>
         </Hero>
     );
 };
