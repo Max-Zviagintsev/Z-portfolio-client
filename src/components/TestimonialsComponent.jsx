@@ -79,6 +79,7 @@ class TestimonialsComponent extends Component {
             fetchedData: this.props.data.allNodeTestimonials.edges,
             isLoading: false
         });
+        console.log(this.state.fetchedData);
     }
 
     showHeading = () => {
@@ -114,7 +115,7 @@ class TestimonialsComponent extends Component {
 
                         <TestimonialsItem>
                             <Slider direction="vertical">
-                                {this.state.fetchedData.map((item, index) => (
+                                {this.state.fetchedData.reverse().map((item, index) => (
                                     <TestimonialsInner key={index}>
                                         <Testimonial>{item.node.field_testimonial}
                                             <Client>{item.node.field_client}</Client>

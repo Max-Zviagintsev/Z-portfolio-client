@@ -75,6 +75,8 @@ const AboutMeComponent = () => {
                                 I build any kinds of React apps from small SPA to large and complex apps with
                                 Redux-based complicated data structure.
                                 I fell in love with Typescript, so I use it as my main programming language.
+                                I'm using Redux-Saga as a middleware to send requests to the server simultaneously and
+                                control the dispatched actions.
                                 I’ve also worked with all popular UI Frameworks. My personal choice is Ant Design
                                 because of the most powerful API,
                                 the largest variety of components and regular updates.</Text>
